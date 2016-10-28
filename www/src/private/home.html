@@ -1,0 +1,15 @@
+<div class="home-parent-module">
+    <div class="text-center title-image">
+        <img src="img/cmosIcon.png" alt="中移在线logo">
+    </div>
+    <div class="text-center item" ng-repeat="item in home.moduleList" ng-click="home.chooseParent(item)" ng-mouseenter="home.enterModule(item)" ng-mouseleave="home.leaveModule(item)" ng-class="{ 'chosen': item.isEnter || home.parentModule.code === item.code, 'item-marketing': item.code === 'marketing' }" ng-if="item.isShow" tooltip-placement="right" uib-tooltip="{{ item.tooltip }}" tooltip-title="全员推广系统" tooltip-trigger="'mouseenter'">
+        <i ng-class="item.icon"></i>
+    </div> 
+</div>
+<div class="home-child-module">
+    <div class="title">{{ home.parentModule.title }}</div>
+    <div class="item" ng-repeat="item in home.parentModule.items" ng-click="home.chooseChild(item)" ng-mouseenter="home.enterModule(item)" ng-mouseleave="home.leaveModule(item)" ng-class="{ 'chosen': item.isEnter || home.childModule.code === item.code }">{{ item.name }}</div>
+</div>
+<div class="home-views">
+    <ui-view></ui-view>
+</div>

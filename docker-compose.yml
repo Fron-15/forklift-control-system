@@ -1,0 +1,11 @@
+cmos-management-system:
+  image: hub.docker.vpclub.cn/vpclub/node:5.10.1
+#  mem_limit: 800m
+#  restart: always
+  ports:
+    - 8103:8103
+
+  volumes:
+    - ./:/app
+  command:
+    sh run.sh dev 8103

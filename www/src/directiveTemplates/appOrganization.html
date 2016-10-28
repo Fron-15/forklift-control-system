@@ -1,0 +1,13 @@
+<div class="organization-content" ng-class="appOrganization.class">
+    <div class="organization-title">{{ appOrganization.title }}</div>
+    <div class="row" ng-repeat="item in appOrganization.list">
+        <div class="col-md-12 organization-header">
+            <i class="text-muted icon" ng-class="appOrganization.getIcon(item)" ng-click="appOrganization.showList(item)"></i>
+            <span class="text-muted"> 一 </span>
+            <span class="name">{{ item.organizationName }}</span>
+        </div>
+        <div class="col-md-offset-1 col-md-11 organization-sub-list" ng-repeat="sub in item.subOrganization" ng-if="!item.isShowSubList">
+            <span class="text-muted"> 一 </span> {{ sub.organizationName }}
+        </div>
+    </div>
+</div>

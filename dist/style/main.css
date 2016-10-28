@@ -1,0 +1,621 @@
+/*-------------------------------------- Global --------------------------------------*/
+a {
+    cursor: pointer;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre {
+    font-family: Microsoft YaHei;
+    /*font-family: PingFangSC-Regular;*/
+}
+
+.product-image-size {
+    width: 640px;
+    height: 640px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.popularize-image-size {
+    width: 650px;
+    height: 340px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*-------------------------------------- SweetAlert Extend --------------------------------------*/
+.sweet-alert {
+    font-family: Microsoft YaHei;
+}
+
+/*-------------------------------------- Bootstrap Extend --------------------------------------*/
+.container-fluid {
+    padding-bottom: 20px;
+}
+
+.table>tbody>tr>td {
+    vertical-align: middle !important;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.row-space {
+    margin-top: 15px;
+}
+
+.row-bottom-space {
+    margin-bottom: 15px;
+}
+
+.btn-longer {
+    padding: 6px 20px !important;
+}
+
+.btn-no-padding {
+    padding: 0;
+}
+
+.bg-notice {
+    background-color: #0099cc;
+    border-color: #0099cc;
+    color: #ffffff;
+}
+
+.text-notice {
+    color: #0099cc;
+}
+
+.btn-group.open > .dropdown-toggle.btn.btn-notice,
+.btn-group-vertical.open > .dropdown-toggle.btn.btn-notice {
+  background-color: #0099cc;
+}
+
+.btn:not(.btn-raised).btn-notice,
+.input-group-btn .btn:not(.btn-raised).btn-notice {
+  color: #0099cc;
+}
+
+.btn.btn-raised.btn-notice,
+.input-group-btn .btn.btn-raised.btn-notice,
+.btn.btn-fab.btn-notice,
+.input-group-btn .btn.btn-fab.btn-notice,
+.btn-group-raised .btn.btn-notice,
+.btn-group-raised .input-group-btn .btn.btn-notice {
+  background-color: #0099cc;
+  color: rgba(255,255,255, 0.84);
+}
+
+.btn.btn-raised:not(.btn-link):hover.btn-notice,
+.input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-notice,
+.btn-group-raised .btn:not(.btn-link):hover.btn-notice,
+.btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-notice,
+.btn.btn-raised:not(.btn-link):focus.btn-notice,
+.input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-notice,
+.btn-group-raised .btn:not(.btn-link):focus.btn-notice,
+.btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-notice,
+.btn.btn-raised:not(.btn-link).active.btn-notice,
+.input-group-btn .btn.btn-raised:not(.btn-link).active.btn-notice,
+.btn-group-raised .btn:not(.btn-link).active.btn-notice,
+.btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-notice,
+.btn.btn-raised:not(.btn-link):active.btn-notice,
+.input-group-btn .btn.btn-raised:not(.btn-link):active.btn-notice,
+.btn-group-raised .btn:not(.btn-link):active.btn-notice,
+.btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-notice {
+  background-color: #218aad;
+}
+
+.btn-notice .badge {
+  color: #0099cc;
+  background-color: #fff;
+}
+
+.alert-notice {
+    color: #ffffff;
+    background-color: #0099cc;
+    border: 1px solid #d9d9d9;
+}
+
+.form-group-extend {
+    margin-top: 9px;
+    padding-bottom: 0;
+}
+
+.form-control-extend {
+    margin-bottom: 0;
+}
+
+/*-------------------------------------- Home --------------------------------------*/
+.tooltip-inner {
+    white-space: nowrap;
+    background-color: rgba(79, 86, 93, .8);
+    padding: 5px 8px;
+}
+
+.home-parent-module {
+    height: 100%;
+    width: 56px;
+    background-color: #212529;
+    position: fixed;
+    left: 0;
+    padding-top: 10px;
+    color: #c3cfd8;
+    font-size: 16px;
+    z-index: 2;
+}
+
+.home-parent-module .title-image {
+    margin-bottom: 30px;
+}
+
+.home-parent-module .item {
+    padding: 12.5px 0 12.5px 0;
+    cursor: pointer;
+}
+
+.home-parent-module .item-marketing {
+    /*margin-top: 30px;*/
+}
+
+.home-parent-module .chosen {
+    color: #ffffff;
+    background-color: rgba(79, 86, 93, 0.5);
+}
+
+.home-child-module {
+    height: 100%;
+    width: 176px;
+    background-color: #31373d;
+    position: fixed;
+    left: 56px;
+    color: #c3cfd8;
+}
+
+.home-child-module .title {
+    height: 56px;
+    line-height: 56px;
+    font-size: 15px;
+    padding-left: 20px;
+    border-bottom: 1px #ccc solid;
+    box-shadow: inset 0px -1px 0px 0px rgba(32, 36, 40, 0.50);
+}
+
+.home-child-module .item {
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.home-child-module .chosen {
+    background-color: #454e57;
+    color: #ffffff;
+}
+
+.home-views {
+    margin-left: 232px;
+    /*min-width: 1170px;*/
+}
+
+/*-------------------------------------- MaterialForm --------------------------------------*/
+.material-form-content {
+    margin-top: 20px;
+}
+
+.material-form-content .material-type-content {
+    margin-top: 80px;
+}
+
+.material-form-content .material-basic-content {
+    margin-top: 40px;
+}
+
+.material-form-content .material-detail-content {
+    margin-top: 40px;
+}
+
+.material-form-content .material-detail-content .header-bar {
+    height: 30px;
+    line-height: 30px;
+    background-color: #302D2D;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.material-form-content .material-detail-content .header-bar .circle {
+    width: 8px;
+    height: 8px;
+    float: left;
+    border-radius: 4px;
+    border: 1px #ccc white;
+    margin: 11px 2px 0 0;
+    background-color: white;
+}
+
+.material-form-content .material-detail-content .app-wifi-icon {
+    margin-left: 4px;
+    font-size: 17px;
+}
+
+.material-form-content .material-detail-content .app-battery-full-icon {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.material-form-content .material-detail-content .nav-bar {
+    height: 55px;
+    line-height: 55px;
+    background-color: #302D2D;
+    border-top: 1px #ccc solid;
+    color: #ffffff;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.material-form-content .material-detail-content .nav-bar .right {
+    font-size: 27px;
+}
+
+.material-form-content .material-detail-content .task-title {
+    position: relative;
+    padding-left: 45px;
+    padding-right: 10px;
+    border: 1px #f5f5f5 solid;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+.material-form-content .material-detail-content .task-title .task-title-image {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -15px;
+}
+
+.material-form-content .material-detail-content .task-content {
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+.material-form-content .material-detail-content .task-content .task-guide {
+    background-color: #ffffff;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.material-form-content .material-detail-content .task-content pre {
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    background-color: #ffffff;
+    border-radius: 0px;
+    border: none;
+    font-size: 16px;
+    margin: 0;
+}
+
+.material-form-content .material-detail-content .task-content .task-detail {
+    background-color: #ffffff;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.material-form-content .material-detail-content .task-title-input {
+    margin-top: 0;
+}
+
+/*-------------------------------------- Overview --------------------------------------*/
+.overview-block {
+    border-right: 1px #ccc solid;
+}
+
+/*-------------------------------------- User --------------------------------------*/
+.user-image {
+    width: 34px;
+    height: 34px;
+}
+
+/*-------------------------------------- ExcelImport --------------------------------------*/
+.excel-import-content {
+    padding-bottom: 115px;
+}
+
+.excel-import-row-space {
+    margin-top: 100px;
+}
+
+/*-------------------------------------- EnterpriseContactForm --------------------------------------*/
+.enterprise-contact-form-button-image {
+    width: 40px;
+    height: 40px;
+}
+
+.enterprise-contact-form-employee-image {
+    margin-top: 55px;
+    width: 100px;
+    height: 100px;
+}
+
+/*-------------------------------------- EnterpriseContactDetail --------------------------------------*/
+.enterprise-contact-detail-form {
+    margin-top: 40px;
+}
+
+.enterprise-contact-detail-form .user-image-bg {
+    width: 100px;
+    height: 100px;
+}
+
+.enterprise-contact-detail-form .status {
+    padding-right: 28px;
+}
+
+.enterprise-contact-detail-list-bar {
+    border-bottom: 1px #ccc solid;
+    margin: 30px 0 30px 0;
+}
+
+.enterprise-contact-detail-list-bar .first-block {
+    border-top: 1px #ccc solid;
+    border-left: 1px #ccc solid;
+    height: 40px;
+    line-height: 40px;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.enterprise-contact-detail-list-bar .second-block {
+    border: 1px #ccc solid;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: none;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+/*-------------------------------------- PlanForm --------------------------------------*/
+.plan-form-content {
+    margin-top: 30px;
+}
+
+.plan-form-title {
+    border-left: 9px solid #d0021b;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.plan-form-content .form-group-button-space {
+    margin-right: 8px;
+}
+
+.plan-form-content .city-button-space {
+    margin-right: 8px;
+    margin-bottom: 15px;
+}
+/*-------------------------------------- ModuleView --------------------------------------*/
+.module-view-title {
+    height: 56px;
+    overflow: hidden;
+    line-height: 56px;
+    font-size: 20px;
+    border-bottom: 1px #ccc solid;
+    padding-left: 20px;
+}
+
+.module-view-title .parent {
+    color: #798c9c;
+}
+
+.module-view-title .parent .icon {
+    vertical-align: middle;
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.module-view-title .user-title {
+    float: right;
+    color: #666;
+}
+
+.module-view-title .user-name {
+    float: right;
+    margin-right: 20px;
+}
+
+/*-------------------------------------- AppPagination --------------------------------------*/
+.pagination-info {
+    line-height: 56px;
+    height: 56px;
+}
+
+.pagination-total {
+    margin-right: 15px;
+}
+
+.pagination-size {
+    width: 60px;
+    margin: 10px 10px 0 10px;
+}
+
+.pagination-size input {
+    text-align: center;
+}
+
+.pagination-index {
+    width: 50px;
+    margin: 10px 10px 0 0;
+}
+
+.pagination-index input {
+    text-align: center;
+}
+
+.pagination-message {
+    margin: 0 10px;
+}
+
+.pagination-left-button {
+    margin-right: 5px;
+}
+
+/*-------------------------------------- AppOrganization --------------------------------------*/
+.organization-content {
+    border-left: 1px #ccc solid;
+    padding-bottom: 50px;
+}
+
+.organization-title {
+    border-left: 5px #4a90e2 solid;
+    height: 25px;
+    line-height: 25px;
+    margin: 30px 0 10px 0;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.organization-header {
+    height: 18px;
+    line-height: 18px;
+    margin: 5px 0 5px 0;
+}
+
+.organization-header .icon {
+    font-size: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.organization-header .name {
+    font-size: 15px;
+}
+
+.organization-sub-list {
+    border-left: 1px #8a8a8a solid;
+    padding: 5px 0 5px 5px;
+}
+
+/*-------------------------------------- DatetimePicker --------------------------------------*/
+.datetime-picker-block {
+    display: inline-block;
+    float: left;
+}
+
+.date-picker-input {
+    width: 125px;
+    margin-right: 5px;
+}
+
+.time-picker-select {
+    width: 52px;
+    /*text-indent: 10px;*/
+    padding-left: 14px;
+}
+
+.time-input-space {
+    height: 34px;
+    line-height: 34px;
+    margin: 0 2px 0 2px;
+}
+@font-face {
+  font-family: 'icons';
+  src:  url('../font/icons.eot?99vkp');
+  src:  url('../font/icons.eot?99vkp#iefix') format('embedded-opentype'),
+    url('../font/icons.ttf?99vkp') format('truetype'),
+    url('../font/icons.woff?99vkp') format('woff'),
+    url('../font/icons.svg?99vkp#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.app-sign-out-icon:before,
+.app-shop-icon:before,
+.app-order-icon:before,
+.app-product-icon:before,
+.app-setting-icon:before,
+.app-data-icon:before,
+.app-marketing-icon:before,
+.app-user-icon:before,
+.app-finance-icon:before,
+.app-home-icon:before,
+.app-wifi-icon:before,
+.app-battery-full-icon:before,
+.app-ellipsis-h-icon:before,
+.app-plus-square-o-icon:before,
+.app-minus-square-o-icon:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-sign-out-icon:before {
+  content: "\f08b";
+}
+.app-ellipsis-h-icon:before {
+  content: "\f141";
+}
+.app-minus-square-o-icon:before {
+  content: "\f147";
+}
+.app-plus-square-o-icon:before {
+  content: "\f196";
+}
+.app-wifi-icon:before {
+  content: "\f1eb";
+}
+.app-battery-full-icon:before {
+  content: "\f240";
+}
+.app-shop-icon:before {
+  content: "\e900";
+}
+.app-order-icon:before {
+  content: "\e901";
+}
+.app-product-icon:before {
+  content: "\e902";
+}
+.app-setting-icon:before {
+  content: "\e903";
+}
+.app-data-icon:before {
+  content: "\e904";
+}
+.app-marketing-icon:before {
+  content: "\e905";
+}
+.app-user-icon:before {
+  content: "\e906";
+}
+.app-finance-icon:before {
+  content: "\e907";
+}
+.app-home-icon:before {
+  content: "\e908";
+}

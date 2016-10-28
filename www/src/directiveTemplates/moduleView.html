@@ -1,0 +1,11 @@
+<div class="module-view-title">
+    <span class="parent">
+        <i class="icon" ng-class="moduleView.icon"></i> {{ moduleView.parentTitle }}
+    </span>
+    <span>{{ moduleView.title }}</span>
+    <span class="user-name">{{ moduleView.userInfo.userResponseData.name }}</span>
+    <span class="user-title">用户名：</span>
+</div>
+<div class="container-fluid">
+    <ng-transclude></ng-transclude>
+</div>

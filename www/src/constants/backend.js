@@ -1,0 +1,9 @@
+(function() {
+    define(['app'], function(app) {
+        app.constant('backend', {
+            url: 'http://cmostest.vpclub.cn',
+            upload: 'http://218.17.39.178:9980/common/api/file/upload',
+            app: 'http://cmostest.vpclub.cn/qytg/wechat/#/missionDetail'
+        });
+    });
+})();

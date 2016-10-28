@@ -1,0 +1,16 @@
+<div class="pull-right clearfix" ng-form="paginationForm">
+    <div class="pagination-info pull-left">
+        <span class="pagination-total" ng-if="pagination.showTotal">共 {{ pagination.totalItems }} 条</span>
+        <span>每页</span>
+    </div>
+    <div class="form-group pagination-size pull-left">
+        <input type="text" class="form-control" name="unit" ng-blur="pagination.updatePageUnit()" ng-model="pagination.pageUnit" ng-pattern="/^[0-9]*$/" required>
+    </div>
+    <div class="form-group pagination-index pull-left">
+        <input type="text" class="form-control" name="skip" ng-model="pagination.skipIndex" ng-pattern="/^[0-9]*$/" required>
+    </div>
+    <button class="btn btn-notice btn-raised pull-left" ng-click="pagination.pageSkip()" ng-disabled="paginationForm.skip.$invalid">跳转</button>
+    <span class="pagination-info pagination-message pull-left">{{ pagination.pageIndex }} / {{ pagination.pageTotal }} 页</span>
+    <button class="btn btn-default btn-raised pagination-left-button pull-left" ng-click="pagination.pageUp()" ng-disabled="pagination.pageIndex === 1"><i class="glyphicon glyphicon-chevron-left"></i></button>
+    <button class="btn btn-default btn-raised pull-left" ng-click="pagination.pageDown()" ng-disabled="pagination.pageIndex === pagination.pageTotal"><i class="glyphicon glyphicon-chevron-right"></i></button>
+</div>

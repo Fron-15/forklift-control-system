@@ -1,0 +1,5 @@
+{
+    "url": "http://api.supay.vpclub.cn",
+    "upload": "http://api.supay.vpclub.cn/common/api/file/upload",
+    "app": "http://api.supay.vpclub.cn/qytg/wechat/#/missionDetail"
+}

@@ -1,0 +1,12 @@
+<div class="clearfix" ng-form="datetimePickerForm">
+    <div class="datetime-picker-block" ng-class="{ 'has-error': datetimePickerForm.date.$invalid }">
+        <input type="text" class="form-control date-picker-input" name="date"  maxlength="10" uib-datepicker-popup="{{ datetimePicker.dateFormat }}" datepicker-options="datetimePicker.dateOptions" is-open="datetimePicker.item.isOpen" ng-model="datetimePicker.item.date" ng-focus="datetimePicker.openPopup()" ng-required="datetimePicker.required" show-button-bar="datetimePicker.showBar" clear-text="清除" current-text="今天" close-text="关闭" on-open-focus="false">
+    </div>
+    <div class="datetime-picker-block" ng-class="{ 'has-error': datetimePickerForm.hour.$invalid }">
+        <select name="hour" class="form-control time-picker-select" ng-model="datetimePicker.item.hour" ng-required="datetimePicker.required" ng-options="hour for hour in datetimePicker.hourList"></select>
+    </div>
+    <div class="datetime-picker-block time-input-space"> : </div>
+    <div class="datetime-picker-block" ng-class="{ 'has-error': datetimePickerForm.mimute.$invalid }">
+        <select name="mimute" class="form-control time-picker-select" ng-model="datetimePicker.item.mimute" ng-required="datetimePicker.required" ng-options="minute for minute in datetimePicker.minuteList"></select>
+    </div>
+</div>
