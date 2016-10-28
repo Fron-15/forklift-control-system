@@ -29,7 +29,7 @@ var constants = require('./environment/gulpConstants')(historyApiFallback);
 //定义文件路径: --path
 //定义文件名称: --name
 var argv = require('yargs').argv;
-//第一次提交测试
+
 if(!argv.release) {
     jsHint = require('gulp-jshint');
     esLint = require('gulp-eslint');
