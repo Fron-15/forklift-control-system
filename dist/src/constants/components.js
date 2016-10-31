@@ -10,7 +10,11 @@
         //controllers
         var components = {
             'login': ['private/login'],
-            'home': ['private/home']
+            'home': ['private/home'],
+            'monitorCentre.forkliftMonitor':['monitorCentre/forkliftMonitor'],
+            'monitorCentre.historyData':['monitorCentre/historyData'],
+            'monitorCentre.vehicleState':['monitorCentre/vehicleState','monitorCentre/vehicleAlarm','monitorCentre/vehicleViolation'],
+            'monitorCentre.maintainRemind':['monitorCentre/maintainRemind']
         };
 
         angular.forEach(components, function(value, key) {

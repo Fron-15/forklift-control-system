@@ -6,27 +6,27 @@
         "tooltip": "监控中心",
         "isShow": true,
         "items": [{
-                "code": "monitor",
+                "code": "forkliftMonitor",
                 "name": "叉车监控"
             },
             {
-                "code": "history",
+                "code": "historyData",
                 "name": "历史数据"
             },
             {
-                "code": "state",
+                "code": "vehicleState",
                 "name": "当前车辆状态"
             },
             {
-                "code": "alarm",
+                "code": "vehicleAlarm",
                 "name": "当前车辆报警"
             },
             {
-                "code": "violation",
+                "code": "vehicleViolation",
                 "name": "当前车辆违规"
             },
             {
-                "code": "remind",
+                "code": "maintainRemind",
                 "name": "保养提醒"
             }
         ]
@@ -39,7 +39,7 @@
         "isShow": true,
         "items": [
             {
-                "code": "controller",
+                "code": "forliftController",
                 "name": "控制器管理"
             },
             {
@@ -51,11 +51,11 @@
                 "name": "叉车信息管理"
             },
             {
-                "code": "mobile",
+                "code": "controlMobile",
                 "name": "调度手机管理"
             },
             {
-                "code": "archives",
+                "code": "driverArchives",
                 "name": "司机档案管理"
             },
             {
@@ -63,37 +63,37 @@
                 "name": "叉车司机关联"
             },
             {
-                "code": "parameter",
+                "code": "parameterConfig",
                 "name": "参数配置"
             }
         ]
     },
     {
-        "code": "maintenance",
+        "code": "maintainRegister",
         "icon": "app-finance-icon",
         "title": "维护保养登记",
         "tooltip": "维护保养登记",
         "isShow": true,
         "items": [
             {
-                "code": "repair",
+                "code": "repairRegister",
                 "name": "叉车维修登记"
             },
             {
-                "code": "maintain",
+                "code": "maintainRegister",
                 "name": "叉车保养登记"
             }
         ]
     },
     {
-        "code": "statementCentre",
+        "code": "reportCentre",
         "icon": "app-user-icon",
         "title": "报表中心",
         "tooltip": "报表中心",
         "isShow": true,
         "items": [
             {
-                "code": "synthesis",
+                "code": "synthesisReport",
                 "name": "叉车综合报表"
             },
             {
@@ -109,19 +109,19 @@
                 "name": "叉车工作效率报表"
             },
             {
-                "code": "alarmStatistics",
+                "code": "alarmReport",
                 "name": "叉车报警统计"
             },
             {
-                "code": "violationStatistics",
+                "code": "violationReport",
                 "name": "叉车违规统计"
             },
             {
-                "code": "repairStatistics",
+                "code": "repairReport",
                 "name": "叉车维修统计"
             },
             {
-                "code": "maintainStatistics",
+                "code": "maintainReport",
                 "name": "叉车保养统计"
             }
         ]
