@@ -39,7 +39,7 @@
         "isShow": true,
         "items": [
             {
-                "code": "forliftController",
+                "code": "forkliftController",
                 "name": "控制器管理"
             },
             {
