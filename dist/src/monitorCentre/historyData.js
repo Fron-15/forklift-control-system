@@ -6,7 +6,8 @@
         historyDataCtrl.$inject = ['$scope'];
 
         function historyDataCtrl($scope) {
-
+            var vm = this;
+            
         }
     });
 })();
