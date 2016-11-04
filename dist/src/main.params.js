@@ -20,7 +20,8 @@ define(function() {
             'angular-ui-select': '../lib/angular-ui-select/dist/select.min',
             'ng-file-upload': '../lib/ng-file-upload/ng-file-upload.min',
             'ngStorage': '../lib/ngstorage/ngStorage.min',
-            'domReady': '../lib/domReady/domReady'
+            'domReady': '../lib/domReady/domReady',
+            'bootstrap-table':'../lib/bootstrap-table/dist/bootstrap-table.min'
         },
         shim: {
             'angular': { exports: 'angular' },
