@@ -208,6 +208,17 @@ pre {
     /*min-width: 1170px;*/
 }
 
+/*-------------------------------------- forkliftMonitor --------------------------------------*/
+#mapWrape{
+    background-color: gray;
+}
+
+#tableWrape{
+    /*background-color: red;*/
+    
+}
+
+
 /*-------------------------------------- ModuleView --------------------------------------*/
 .module-view-title {
     height: 56px;
