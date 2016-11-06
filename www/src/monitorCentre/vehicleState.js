@@ -36,7 +36,7 @@
 
             //获取叉车列表数据
             function getTableData() {
-                Service.getJson('vehicleStateCtrl').then(function(data) {
+                Service.getJson('vehicleState').then(function(data) {
                     vm.tableData = data;
                 });
             }
