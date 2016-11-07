@@ -5,13 +5,14 @@
             'factorys/service', 
             'services/modal', 'services/cache', 'services/datePicker',
             'constants/backend', 'constants/backendInterface',
-            'directives/moduleView', 'directiveTemplates/moduleView'
+            'directives/moduleView', 'directiveTemplates/moduleView',
+            'directives/appPagination','directiveTemplates/appPagination'
         ];
         //controllers
         var components = {
             'login': ['private/login'],
             'home': ['private/home'],
-            'monitorCentre.forkliftMonitor':['monitorCentre/forkliftMonitor'],
+            'monitorCentre.forkliftMonitor':['monitorCentre/forkliftMonitor','monitorCentre/forkliftSearch'],
             'monitorCentre.historyData':['monitorCentre/historyData'],
             'monitorCentre.vehicleState':['monitorCentre/vehicleState'],
             'monitorCentre.vehicleAlarm':['monitorCentre/vehicleAlarm'],
