@@ -11,11 +11,11 @@ h3,
 h4,
 h5,
 h6,
-pre {
+pre,
+input{
     font-family: Microsoft YaHei;
     /*font-family: PingFangSC-Regular;*/
 }
-
 
 
 .product-image-size {
@@ -47,7 +47,7 @@ pre {
 }
 
 .table {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .row-space {
@@ -211,12 +211,43 @@ pre {
 /*-------------------------------------- forkliftMonitor --------------------------------------*/
 #mapWrape{
     background-color: gray;
+    height: 300px;
+
 }
 
-#tableWrape{
-    /*background-color: red;*/
-    
+/*-------------------------------------- forkliftSearch --------------------------------------*/
+.forkliftSearch .form-group{
+    margin: 0px;
 }
+
+.forkliftSearch .panel-body
+{
+    padding: 0;
+}
+
+.blockTitle{
+    height: 30px;
+    line-height: 30px;
+}
+
+.titleBlock{
+     display: inline-block;
+     width:10px;
+     height: 30px;
+     background-color: black; 
+}
+
+.blockTitle h5{
+    position: absolute;
+    display: inline-block;
+    margin: 0px;
+    top: 8px;
+    left: 30px;
+}
+
+
+
+
 
 
 /*-------------------------------------- ModuleView --------------------------------------*/
