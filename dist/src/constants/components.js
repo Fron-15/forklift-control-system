@@ -12,7 +12,7 @@
         var components = {
             'login': ['private/login'],
             'home': ['private/home'],
-            'monitorCentre.forkliftMonitor':['monitorCentre/forkliftMonitor'],
+            'monitorCentre.forkliftMonitor':['monitorCentre/forkliftMonitor','monitorCentre/forkliftSearch'],
             'monitorCentre.historyData':['monitorCentre/historyData'],
             'monitorCentre.vehicleState':['monitorCentre/vehicleState'],
             'monitorCentre.vehicleAlarm':['monitorCentre/vehicleAlarm'],

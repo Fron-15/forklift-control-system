@@ -2,7 +2,9 @@
     <div id="mapWrape" class="col-md-12">
         地图
     </div>
-    <table class="table table-striped table-hover table-bordered">
+    <a  class="btn btn-primary  btn-raised btn-lg " ng-click="forkliftMonitor.openForkliftSearch()">叉车检索</a>
+
+    <table class="table table-condensed table-hover table-bordered table-striped">
         <thead>
             <tr>
                 <th></th>
@@ -13,18 +15,18 @@
                         </label>
                     </div>
                 </th>
-                <th ng-click="col='car_sn';desc=!desc"><a href="javascript:void(0)" class="btn btn-default">叉车编号</a></th>
-                <th ng-click="col='da_up';desc=!desc"><a href="javascript:void(0)" class="btn btn-default">数据时间</a></th>
-                <th ng-click="col='work_hours';desc=!desc"><a href="javascript:void(0)" class="btn btn-default">工作小时数</a></th>
-                <th ng-click="col='speed';desc=!desc"><a href="javascript:void(0)" class="btn btn-default">速度</a></th>
-                <th ng-click="col='dump_energy';desc=!desc"><a href="javascript:void(0)" class="btn btn-default">载重</a></th>
-                <th ng-click="col='driver_name';desc=!desc"><a href="javascript:void(0)" class="btn btn-default">驾驶人</a></th>
-                <th><a href="javascript:void(0)" class="btn btn-default">在线</a></th>
-                <th><a href="javascript:void(0)" class="btn btn-default">是否故障</a></th>
-                <th><a href="javascript:void(0)" class="btn btn-default">锁车状态</a></th>
-                <th><a href="javascript:void(0)" class="btn btn-default">限速状态</a></th>
-                <th ng-click="col='department_name';desc=!desc"><a href="javascript:void(0)" class="btn btn-default">使用部门</a></th>
-                <th><a href="javascript:void(0)" class="btn btn-default">位置</a></th>
+                <th ng-click="col='car_sn';desc=!desc">叉车编号</th>
+                <th ng-click="col='da_up';desc=!desc">数据时间</th>
+                <th ng-click="col='work_hours';desc=!desc">工作小时数</th>
+                <th ng-click="col='speed';desc=!desc">速度</th>
+                <th ng-click="col='dump_energy';desc=!desc">载重</th>
+                <th ng-click="col='driver_name';desc=!desc">驾驶人</th>
+                <th>在线</th>
+                <th>是否故障</th>
+                <th>锁车状态</th>
+                <th>限速状态</th>
+                <th ng-click="col='department_name';desc=!desc">使用部门</th>
+                <th>位置</th>
             </tr>
         </thead>
         <tbody>

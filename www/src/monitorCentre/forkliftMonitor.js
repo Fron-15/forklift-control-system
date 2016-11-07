@@ -2,16 +2,19 @@
     define(['app'], function(app) {
         app.controller('forkliftMonitorCtrl', forkliftMonitorCtrl);
 
-        forkliftMonitorCtrl.$inject = ['$scope', 'Service'];
+        forkliftMonitorCtrl.$inject = ['$scope', 'Service','Modal'];
 
-        function forkliftMonitorCtrl($scope, Service) {
+        function forkliftMonitorCtrl($scope, Service,Modal) {
             var vm = this;
             //单选
             vm.checked = checked;
+            //打开叉车检索
+            vm.openForkliftSearch = openForkliftSearch;
             //查询条件
             vm.condition = { pageNo:1 , pageSize:10 };
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 24;
+
 
 
             //被选中的叉车ID
@@ -38,6 +41,12 @@
                     vm.tableData = data;
                 });
             }
+
+            //打开叉车检索
+            function openForkliftSearch(){
+              Modal.open('monitorCentre','forkliftSearch');
+            }
+
         }
     });
 })();
