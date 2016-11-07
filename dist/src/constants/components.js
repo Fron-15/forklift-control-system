@@ -5,7 +5,8 @@
             'factorys/service', 
             'services/modal', 'services/cache', 'services/datePicker',
             'constants/backend', 'constants/backendInterface',
-            'directives/moduleView', 'directiveTemplates/moduleView'
+            'directives/moduleView', 'directiveTemplates/moduleView',
+            'directives/appPagination','directiveTemplates/appPagination'
         ];
         //controllers
         var components = {

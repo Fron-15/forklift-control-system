@@ -211,12 +211,9 @@ pre {
 /*-------------------------------------- forkliftMonitor --------------------------------------*/
 #mapWrape{
     background-color: gray;
+    height: 300px;
 }
 
-#tableWrape{
-    /*background-color: red;*/
-    
-}
 
 
 /*-------------------------------------- ModuleView --------------------------------------*/
