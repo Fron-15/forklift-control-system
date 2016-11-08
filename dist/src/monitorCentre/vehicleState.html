@@ -1,1 +1,73 @@
-<module-view icon="app-product-icon" parent-title="监控中心 / " title="当前车辆状态"><div class="row"><div class="col-lg-2"><!-- chat --><div class="panel panel-default"><div class="panel-heading">所属部门</div><div class="panel-body"></div><footer class="panel-footer"></footer></div><!-- /chat --></div><div class="col-lg-10"><div class="panel panel-default"><div class="panel-heading">车辆状态</div><div class="panel-body"><div class="wrapper-sm bg-white-only b-b"><button class="btn m-l-xs btn-sm btn-info btn-raised"><i class="fa fa-unlock"></i>锁车</button> <button class="btn m-l-xs btn-sm btn-danger btn-raised"><i class="fa fa-lock"></i>解车</button> <button class="btn m-l-xs btn-sm btn-success btn-raised"><i class="fa fa-plus"></i>限速</button> <button class="btn m-l-xs btn-sm btn-primary btn-raised"><i class="fa fa-check"></i>解速</button> <button class="btn m-l-xs btn-sm btn-dark btn-raised"><i class="fa fa-gear"></i>发生语音</button><form name="searchForm" class="pull-right col-sm-3" method="get"><div class="input-group"><input type="text" class="input-sm form-control" placeholder="搜索内容" ng-model="searchTxt" ng-keyup="changeSearch(searchTxt)"> <span class="input-group-btn"><button class="btn m-l-xs btn-sm btn-info btn-raised" type="button" ng-click="searchName()"><i class="icon-magnifier">确定</i></button></span></div></form></div><div><div class="wrapper-template m-t-n"><div class="panel panel-default"><div><table class="table task-ul-list table-striped mb0"><thead><tr><th width="5"></th><th width="100">叉车编号</th><th width="100">数据时间</th><th width="120">工作小时数</th><th width="60">速度</th><th width="60">载重</th><th width="80">驾驶人</th><th width="60">在线</th><th width="100">锁车状态</th><th width="100">限速状态</th><th width="100">故障状态</th><th width="100">违规状态</th><th width="100">使用部门</th><th width="60">位置</th></tr></thead></table></div></div></div></div></div></div></div><div class="col-lg-12"><div id="tableWrape" class="col-md-12"><table class="table table-striped table-hover table-bordered"><thead><tr><th><div class="checkbox"><label><input type="checkbox" ng-click="vehicleStateCtrl.checkAll()"></label></div></th><th></th><th>叉车编号</th><th>数据时间</th><th>工作小时数</th><th>速度</th><th>载重</th><th>驾驶人</th><th>在线</th><th>是否故障</th><th>锁车状态</th><th>限速状态</th><th>使用部门</th><th>位置</th></tr></thead><tbody><tr ng-repeat="item in vehicleStateCtrl.tableData.rows"><td><div class="checkbox"><label><input type="checkbox" ng-click="vehicleStateCtrl.checked(item.vid)" ng-checked="vehicleStateCtrl.allChecked"></label></div></td><td>{{$index+1}}</td><td><a href="http://www.baidu.com">{{item.car_sn}}</a></td><td>{{item.da_up}}</td><td>{{item.work_hours}}</td><td>{{item.speed}}</td><td>{{item.dump_energy}}</td><td>{{item.driver_name}}</td><td>在线</td><td>否</td><td>未锁车</td><td>未限速</td><td>{{item.department_name}}</td><td>深圳</td></tr></tbody></table></div></div></div></module-view>
+<module-view icon="app-product-icon" parent-title="监控中心 / " title="当前车辆状态"><div class="row"><div class="col-lg-2"><!-- chat --><div class="panel panel-default"><div class="panel-heading">所属部门</div><div class="panel-body"><treecontrol class="tree-light" tree-model="treedata" on-selection="showSelected(node)">label: {{node.label}} ({{node.id}})</treecontrol><!--  <div class="row docs-body">
+           <div class="col-md-9">
+               <section id="light" ng-controller="Light">
+                   <div class="row">
+                       <div class="col-md-6 show-grid">
+                           <div class="panel panel-default">
+                               <div class="panel-body">
+                                  <div save-content="light-html">
+                                      <treecontrol class="tree-light"
+                                       tree-model="treedata"
+                                       on-selection="showSelected(node)">
+                                       label: {{node.label}} ({{node.id}})
+                                      </treecontrol>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                <script save-content="light-js">
+                   function Light($scope) {
+                       $scope.treedata=createSubTree(3, 4, "");
+                       console.log($scope.treedata);
+                       $scope.showSelected = function(sel) {
+                           $scope.selectedNode = sel;
+                       };
+                   }
+                </script>
+               </section>
+           </div>
+       </div>
+       
+       <script>
+           var entityMap = {
+               "&": "&amp;",
+               "<": "&lt;",
+               ">": "&gt;",
+               '"': '&quot;',
+               "'": '&#39;',
+               "/": '&#x2F;'
+           };
+           function escapeHtml(string) {
+               return String(string).replace(/[&<>"'\/]/g, function (s) {
+                   return entityMap[s];
+               });
+           }
+           var nonSpace = /\S/;
+           function trimIndent(content) {
+               var lines = content.split("\n");
+               var begin = 0;
+               var end = lines.length-1;
+               while ((nonSpace.exec(lines[begin]) == null) && (begin < lines.length))
+                   begin = begin + 1;
+               while ((nonSpace.exec(lines[end]) == null) && end >= begin)
+                   end = end - 1;
+               var ident = nonSpace.exec(lines[begin]).index;
+               var formatted = "";
+               for (var i = begin; i <= end; i++) {
+                   formatted = formatted + lines[i].slice(ident-1) + ((i < end)?"\n":"");
+               }
+               return formatted;
+           }
+           var names = ['Homer', 'Marge', 'Bart', 'Lisa', 'Mo'];
+           function createSubTree(level, width, prefix) {
+               if (level > 0) {
+                   var res = [];
+                   for (var i=1; i <= width; i++)
+                       res.push({ "label" : "Node " + prefix + i, "id" : "id"+prefix + i, "i": i, "children": createSubTree(level-1, width, prefix + i +"."), "name": names[i%names.length] });
+                   return res;
+               }
+               else
+                   return [];
+           }
+       </script> --></div><footer class="panel-footer"></footer></div><!-- /chat --></div><div class="col-lg-10"><div class="panel panel-default"><div class="panel-heading">车辆状态</div><div class="panel-body"><div class="wrapper-sm bg-white-only b-b"><button class="btn m-l-xs btn-sm btn-info btn-raised"><i class="fa fa-unlock"></i>锁车</button> <button class="btn m-l-xs btn-sm btn-danger btn-raised"><i class="fa fa-lock"></i>解车</button> <button class="btn m-l-xs btn-sm btn-success btn-raised"><i class="fa fa-plus"></i>限速</button> <button class="btn m-l-xs btn-sm btn-primary btn-raised"><i class="fa fa-check"></i>解速</button> <button class="btn m-l-xs btn-sm btn-dark btn-raised"><i class="fa fa-gear"></i>发生语音</button><form name="searchForm" class="pull-right col-sm-3" method="get"><div class="input-group"><input type="text" class="input-sm form-control" placeholder="搜索内容" ng-model="searchTxt" ng-keyup="changeSearch(searchTxt)"> <span class="input-group-btn"><button class="btn m-l-xs btn-sm btn-info btn-raised" type="button" ng-click="searchName()"><i class="icon-magnifier">确定</i></button></span></div></form></div><div><div id="tableWrape" class="col-md-12"><table class="table table-condensed table-hover table-bordered table-striped"><thead><tr><th></th><th><div class="radio"><label><input type="radio" name="one" disabled></label></div></th><th ng-click="col='car_sn';desc=!desc">叉车编号</th><th ng-click="col='da_up';desc=!desc">数据时间</th><th ng-click="col='work_hours';desc=!desc">工作小时数</th><th ng-click="col='speed';desc=!desc">速度</th><th ng-click="col='dump_energy';desc=!desc">载重</th><th ng-click="col='driver_name';desc=!desc">驾驶人</th><th>在线</th><th>是否故障</th><th>锁车状态</th><th>限速状态</th><th ng-click="col='department_name';desc=!desc">使用部门</th><th>位置</th></tr></thead><tbody><tr ng-repeat="item in vehicleState.tableData.rows | orderBy:col:desc"><td>{{$index+1}}</td><td><div class="radio"><label><input type="radio" name="one" ng-click="vehicleState.checked(item.vid)"></label></div></td><td bg-bind="item.car_sn"><a href="http://www.baidu.com">{{item.car_sn}}</a></td><td ng-bind="item.da_up">{{item.da_up}}</td><td ng-bind="item.work_hours">{{item.work_hours}}</td><td ng-bind="item.speed">{{item.speed}}</td><td ng-bind="item.dump_energy">{{item.dump_energy}}</td><td ng-bind="item.driver_name">{{item.driver_name}}</td><td>在线</td><td>否</td><td>未锁车</td><td>未限速</td><td ng-bind="item.department_name">{{item.department_name}}</td><td>深圳</td></tr></tbody></table><app-pagination page-index="vehicleState.condition.pageNo" total-items="vehicleState.totalRecord" page-item-unit="vehicleState.condition.pageSize" show-total="true"></app-pagination></div></div></div></div></div></div></module-view>
