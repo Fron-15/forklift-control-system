@@ -7,13 +7,18 @@
         
 
         function vehicleStateCtrl($scope, Service) {
-             var vm = this;
+            var vm = this;
+            //全选属性
+            vm.allChecked = false;
+
             //单选
             vm.checked = checked;
+            //全选点击事件
+            vm.checkedAll=checkedAll;
             //查询条件
             vm.condition = { pageNo:1 , pageSize:10 };
             //数据总量，先写死 24 ，要根据接口
-            vm.totalRecord = 24;
+            vm.totalRecord = 30;
 
 
 
@@ -32,6 +37,10 @@
             //单选
             function checked(item) {
                 vm.checkedId = vm.checkedId == item ? '' : item;
+            }
+            //全选
+            function checkedAll(){
+                  vm.allChecked = !vm.allChecked;
             }
 
             //获取叉车列表数据(模拟)

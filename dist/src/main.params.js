@@ -20,8 +20,7 @@ define(function() {
             'angular-ui-select': '../lib/angular-ui-select/dist/select.min',
             'ng-file-upload': '../lib/ng-file-upload/ng-file-upload.min',
             'ngStorage': '../lib/ngstorage/ngStorage.min',
-            'domReady': '../lib/domReady/domReady',
-            'treeControl':'../lib/angular-bootstrap-nav-tree/dist/abn_tree_directive'
+            'domReady': '../lib/domReady/domReady'
         },
         shim: {
             'angular': { exports: 'angular' },
@@ -39,8 +38,7 @@ define(function() {
             'angular-bootstrap': ['angular-animate', 'bootstrap', 'bootstrap-material', 'ripples'],
             'angular-ui-select': ['angular-sanitize'],
             'ng-file-upload': ['angular'],
-            'ngStorage': ['angular'],
-            'treeControl':['angular']
+            'ngStorage': ['angular']
         } 
     };
     return requirejsConstants;
