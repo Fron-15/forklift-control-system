@@ -1,4 +1,5 @@
 /*-------------------------------------- Global --------------------------------------*/
+
 a {
     cursor: pointer;
 }
@@ -12,11 +13,10 @@ h4,
 h5,
 h6,
 pre,
-input{
+input {
     font-family: Microsoft YaHei;
     /*font-family: PingFangSC-Regular;*/
 }
-
 
 .product-image-size {
     width: 640px;
@@ -32,12 +32,47 @@ input{
     max-height: 100%;
 }
 
+.block-title {
+    border-left: 9px solid #d0021b;
+    height: 30px;
+    line-height: 30px;
+    font-style: 20px;
+    font-weight: bold;
+    left: 20px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-y: auto;
+    overflow: auto;
+    margin: 0 0 1em;
+
+}
+
+table{
+    white-space: nowrap;
+
+}
+
+table > thead > tr > th{
+    text-align:center;
+    vertical-align:middle !important;
+} 
+
+table > tbody > tr > td{
+    text-align:center;
+    vertical-align:middle !important;
+} 
+
 /*-------------------------------------- SweetAlert Extend --------------------------------------*/
+
 .sweet-alert {
     font-family: Microsoft YaHei;
 }
 
+
 /*-------------------------------------- Bootstrap Extend --------------------------------------*/
+
 .container-fluid {
     padding-bottom: 20px;
 }
@@ -78,12 +113,12 @@ input{
 
 .btn-group.open > .dropdown-toggle.btn.btn-notice,
 .btn-group-vertical.open > .dropdown-toggle.btn.btn-notice {
-  background-color: #0099cc;
+    background-color: #0099cc;
 }
 
 .btn:not(.btn-raised).btn-notice,
 .input-group-btn .btn:not(.btn-raised).btn-notice {
-  color: #0099cc;
+    color: #0099cc;
 }
 
 .btn.btn-raised.btn-notice,
@@ -92,8 +127,8 @@ input{
 .input-group-btn .btn.btn-fab.btn-notice,
 .btn-group-raised .btn.btn-notice,
 .btn-group-raised .input-group-btn .btn.btn-notice {
-  background-color: #0099cc;
-  color: rgba(255,255,255, 0.84);
+    background-color: #0099cc;
+    color: rgba(255, 255, 255, 0.84);
 }
 
 .btn.btn-raised:not(.btn-link):hover.btn-notice,
@@ -112,12 +147,12 @@ input{
 .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-notice,
 .btn-group-raised .btn:not(.btn-link):active.btn-notice,
 .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-notice {
-  background-color: #218aad;
+    background-color: #218aad;
 }
 
 .btn-notice .badge {
-  color: #0099cc;
-  background-color: #fff;
+    color: #0099cc;
+    background-color: #fff;
 }
 
 .alert-notice {
@@ -135,7 +170,9 @@ input{
     margin-bottom: 0;
 }
 
+
 /*-------------------------------------- Home --------------------------------------*/
+
 .tooltip-inner {
     white-space: nowrap;
     background-color: rgba(79, 86, 93, .8);
@@ -208,36 +245,38 @@ input{
     /*min-width: 1170px;*/
 }
 
+
 /*-------------------------------------- forkliftMonitor --------------------------------------*/
-#mapWrape{
+
+#mapWrape {
     background-color: gray;
     height: 300px;
-
 }
 
+
 /*-------------------------------------- forkliftSearch --------------------------------------*/
-.forkliftSearch .form-group{
+
+.forkliftSearch .form-group {
     margin: 0px;
 }
 
-.forkliftSearch .panel-body
-{
+.forkliftSearch .panel-body {
     padding: 0;
 }
 
-.blockTitle{
+.blockTitle {
     height: 30px;
     line-height: 30px;
 }
 
-.titleBlock{
-     display: inline-block;
-     width:10px;
-     height: 30px;
-     background-color: black; 
+.titleBlock {
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    background-color: black;
 }
 
-.blockTitle h5{
+.blockTitle h5 {
     position: absolute;
     display: inline-block;
     margin: 0px;
@@ -246,6 +285,4 @@ input{
 }
 
 
-
-
-
+/*-------------------------------------- historyData --------------------------------------*/
