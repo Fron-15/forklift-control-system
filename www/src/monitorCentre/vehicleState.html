@@ -58,10 +58,11 @@
                     <th ng-click="col='speed';desc=!desc">速度</th>
                     <th ng-click="col='dump_energy';desc=!desc">载重</th>
                     <th ng-click="col='driver_name';desc=!desc">驾驶人</th>
-                    <th>在线</th>
-                    <th>是否故障</th>
-                    <th>锁车状态</th>
-                    <th>限速状态</th>
+                    <th ng-click="col='acc';desc=!desc">在线</th>                    
+                    <th ng-click="col='lock_status';desc=!desc">锁车状态</th>
+                    <th ng-click="col='speedlimit_status';desc=!desc">限速状态</th>
+                    <th ng-click="col='fuel_press_alarm';desc=!desc">故障状态</th>
+                    <th ng-click="col='region_alarm';desc=!desc">违规状态</th>
                     <th ng-click="col='department_name';desc=!desc">使用部门</th>
                     <th>位置</th>
                 </tr>
@@ -82,12 +83,38 @@
                     <td ng-bind="item.speed">{{item.speed}}</td>
                     <td ng-bind="item.dump_energy">{{item.dump_energy}}</td>
                     <td ng-bind="item.driver_name">{{item.driver_name}}</td>
-                    <td>在线</td>
-                    <td>否</td>
-                    <td>未锁车</td>
-                    <td>未限速</td>
+                    <td ng-bind="item.acc">
+                        <span ng-switch on="item.acc">
+                            <span ng-switch-when="0">离线</span>
+                            <span ng-switch-when="1">在线</span>
+                        </span>
+                    </td>
+                    <td ng-bind="item.lock_status">
+                        <span ng-switch on="item.lock_status">
+                            <span ng-switch-when="">未锁车</span>
+                            <span ng-switch-when="0"></span>
+                        </span>
+                    </td>
+                    <td ng-bind="item.speedlimit_status">
+                        <span ng-switch on="item.speedlimit_status">
+                            <span ng-switch-when="">未限速</span>
+                            <span ng-switch-when="0"></span>
+                        </span>
+                    </td>
+                    <td ng-bind="item.fuel_press_alarm">
+                        <span ng-switch on="item.fuel_press_alarm">
+                            <span ng-switch-when="">是</span>
+                            <span ng-switch-when="0">否</span>
+                        </span>
+                    </td>
+                    <td ng-bind="item.region_alarm">
+                        <span ng-switch on="item.region_alarm">
+                            <span ng-switch-when="">违规</span>
+                            <span ng-switch-when="0">正常</span>
+                        </span>
+                    </td>
                     <td ng-bind="item.department_name">{{item.department_name}}</td>
-                    <td>深圳</td>
+                    <td><!-- {{item.location}} -->深圳</td>
                 </tr>
             </tbody>
          </table>
