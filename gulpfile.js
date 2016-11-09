@@ -28,7 +28,6 @@ var constants = require('./environment/gulpConstants')(historyApiFallback);
 //删除angular生成文件: --d, --delete
 //定义文件路径: --path
 //定义文件名称: --name
-//测试
 var argv = require('yargs').argv;
 
 if(!argv.release) {
