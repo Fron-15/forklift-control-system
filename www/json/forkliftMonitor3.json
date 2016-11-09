@@ -3,6 +3,7 @@
     "total": "12",
     "rows": [
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "",
             "acc_padel_position": "0.0",
@@ -80,6 +81,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "0.0",
@@ -157,6 +159,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "0.0",
@@ -234,6 +237,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "",
@@ -311,6 +315,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "",
@@ -388,6 +393,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "",
@@ -465,6 +471,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "",
@@ -542,6 +549,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "",
@@ -619,6 +627,7 @@
             "pull_control_temperature": "40"
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "",
@@ -696,6 +705,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "",
@@ -773,6 +783,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "0",
             "acc_padel_position": "",
@@ -850,6 +861,7 @@
             "pull_control_temperature": ""
         },
         {
+            "isSelected":false,
             "gps_alarm": "",
             "preheat_status": "",
             "acc_padel_position": "0.0",

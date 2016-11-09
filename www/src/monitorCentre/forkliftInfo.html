@@ -1,0 +1,112 @@
+<div class="modal-header">
+    <div class="row">
+        <div class="col-md-12 block-title">叉车相关信息</div>
+    </div>
+</div>
+<div class="modal-body forkliftInfo">
+    <div class="table-container">
+        <table class="table table-condensed table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="4" class="info">基本信息</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>控制器编号：</td>
+                    <td>{{forkliftInfo.baseInfoData.gps_alarm}}</td>
+                    <td>叉车序列号：</td>
+                    <td>{{forkliftInfo.baseInfoData.preheat_status}}</td>
+                </tr>
+                <tr>
+                    <td>车辆类型：</td>
+                    <td>{{forkliftInfo.baseInfoData.acc_padel_position}}</td>
+                    <td>数据时间：</td>
+                    <td>{{forkliftInfo.baseInfoData.location}}</td>
+                </tr>
+                <tr>
+                    <td>工作小时数：</td>
+                    <td>{{forkliftInfo.baseInfoData.oil_pump_motor_tempera}}</td>
+                    <td>速度：</td>
+                    <td>{{forkliftInfo.baseInfoData.engine_oil_temperature}}</td>
+                </tr>
+                <tr>
+                    <td>故障码：</td>
+                    <td>{{forkliftInfo.baseInfoData.middle_bit}}</td>
+                    <td>客户名称：</td>
+                    <td>{{forkliftInfo.baseInfoData.fuel_temperature}}</td>
+                </tr>
+                <tr>
+                    <td>地点：</td>
+                    <td colspan="3">{{forkliftInfo.baseInfoData.lock_status}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-condensed table-bordered ">
+            <thead>
+                <tr>
+                    <th colspan="4" class="success">电瓶车信息</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>牵引电机温度：</td>
+                    <td>{{forkliftInfo.vechileData.gps_alarm}}</td>
+                    <td>油泵电机温度：</td>
+                    <td>{{forkliftInfo.vechileData.preheat_status}}</td>
+                </tr>
+                <tr>
+                    <td>牵引电控温度：</td>
+                    <td>{{forkliftInfo.vechileData.acc_padel_position}}</td>
+                    <td>油泵电控温度：</td>
+                    <td>{{forkliftInfo.vechileData.location}}</td>
+                </tr>
+                <tr>
+                    <td>电瓶剩余电量：</td>
+                    <td>{{forkliftInfo.vechileData.oil_pump_motor_tempera}}</td>
+                    <td>锁车限速状态：</td>
+                    <td>{{forkliftInfo.vechileData.engine_oil_temperature}}</td>
+                </tr>
+                <tr>
+                    <td>泵控时间：</td>
+                    <td>{{forkliftInfo.vechileData.middle_bit}}</td>
+                    <td>牵引时间：</td>
+                    <td>{{forkliftInfo.vechileData.fuel_temperature}}</td>
+                </tr>
+                <tr>
+                    <td>维保提示：</td>
+                    <td>{{forkliftInfo.vechileData.lock_status}}</td>
+                    <td>充电状态：</td>
+                    <td>{{forkliftInfo.vechileData.pull_time}}</td>
+                </tr>
+                <tr>
+                    <td>预热：</td>
+                    <td>{{forkliftInfo.vechileData.hard_id}}</td>
+                    <td>发动机故障：</td>
+                    <td>{{forkliftInfo.vechileData.driver_id}}</td>
+                </tr>
+                <tr>
+                    <td>中位：</td>
+                    <td>{{forkliftInfo.vechileData.longitude}}</td>
+                    <td>故障报警：</td>
+                    <td>{{forkliftInfo.vechileData.fuel_consumption}}</td>
+                </tr>
+                <tr>
+                    <td>手制动：</td>
+                    <td>{{forkliftInfo.vechileData.client_id}}</td>
+                    <td>严重故障报警：</td>
+                    <td>{{forkliftInfo.vechileData.department_name}}</td>
+                </tr>
+                <tr>
+                    <td>空滤：</td>
+                    <td>{{forkliftInfo.vechileData.manifold_temperature}}</td>
+                    <td>安全带：</td>
+                    <td>{{forkliftInfo.vechileData.vid}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <a class="btn btn-primary" ng-click="forkliftInfo.close()">关闭</a>
+</div>
