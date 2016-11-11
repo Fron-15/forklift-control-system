@@ -39,8 +39,8 @@
                <button class="btn m-l-xs btn-sm btn-dark btn-raised">
                  <i class="fa fa-gear"></i>发生语音</button> 
             </div>
-
-            <div id="tableWrape">
+           
+            <div id="tableWrape" class="table-container">
              <table class="table table-condensed table-hover table-bordered table-striped">
               <thead>
                 <tr>
@@ -114,7 +114,7 @@
                         </span>
                     </td>
                     <td ng-bind="item.department_name">{{item.department_name}}</td>
-                    <td><!-- {{item.location}} -->深圳</td>
+                    <td>{{item.location}}</td>
                 </tr>
             </tbody>
          </table>

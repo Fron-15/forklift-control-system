@@ -30,16 +30,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="item in forkliftMonitor.tableData.rows | orderBy:col:desc">
+                <tr ng-repeat="item in forkliftMonitor.tableData.rows | orderBy:col:desc" ng-click="forkliftMonitor.onClick(item)">
                     <td>{{$index+1}}</td>
                     <td>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="one" ng-click="forkliftMonitor.checked(item.vid)">
+                                <input type="radio" name="one" ng-click="forkliftMonitor.checked(item.vid)" ng-checked="item.isSelected">
                             </label>
                         </div>
                     </td>
-                    <td bg-bind="item.car_sn"> <a href="http://www.baidu.com"> {{item.car_sn}} </a></td>
+                    <td bg-bind="item.car_sn"> <a ng-click="forkliftMonitor.openForkliftInfo()"> {{item.car_sn}} </a></td>
                     <td ng-bind="item.da_up">{{item.da_up}}</td>
                     <td ng-bind="item.work_hours">{{item.work_hours}}</td>
                     <td ng-bind="item.speed">{{item.speed}}</td>
