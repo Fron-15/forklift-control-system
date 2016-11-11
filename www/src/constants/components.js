@@ -18,7 +18,7 @@
             'monitorCentre.vehicleAlarm':['monitorCentre/vehicleAlarm'],
             'monitorCentre.vehicleViolation':['monitorCentre/vehicleViolation'],
             'monitorCentre.maintainRemind':['monitorCentre/maintainRemind'],
-            'baseData.forkliftController':['baseData/forkliftController'],
+            'baseData.forkliftController':['baseData/forkliftController','baseData/addForkliftController'],
             'baseData.vehicleType':['baseData/vehicleType'],
             'baseData.vehicleInfo':['baseData/vehicleInfo'],
             'baseData.controlMobile':['baseData/controlMobile'],
