@@ -27,23 +27,17 @@
                   </div>
             </div>
 
-            <div class="wrapper-sm bg-white-only b-b">
+            <!-- <div class="wrapper-sm bg-white-only b-b">
                <button class="btn m-l-xs btn-sm btn-info btn-raised">
                  <i class="fa fa-unlock"></i>编辑</button>
-            </div>
+            </div> -->
 
             <div id="tableWrape" class="table-container">
              <table class="table table-condensed table-hover table-bordered table-striped">
               <thead>
                 <tr>
-                    <th></th>
-                    <th>
-                       <div class="checkbox">
-                            <label>
-                                <input type="checkbox" ng-click="maintainRemind.checkedAll()">
-                            </label>
-                        </div>
-                    </th>
+                    <th>编号</th>
+                    <th>操作</th>
                     <th ng-click="col='device_no';desc=!desc">叉车编号</th>
                     <th ng-click="col='da_last_maintain';desc=!desc">上次维保日期</th>
                     <th ng-click="col='workhours';desc=!desc">工作小时数</th>
@@ -63,13 +57,11 @@
                 <tr ng-repeat="item in maintainRemind.tableData.rows | orderBy:col:desc">
                     <td>{{$index+1}}</td>
                     <td>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" ng-checked="maintainRemind.allChecked">
-                            </label>
-                        </div>
+                      <button class="btn m-l-xs btn-sm btn-info btn-raised"
+                      ng-click="maintainRemind.openMaintainRemindInfo()">
+                        <i class="fa fa-unlock"></i>编辑</button>
                     </td>
-                    <td bg-bind="item.device_no"> <a href="http://www.baidu.com"> {{item.device_no}} </a></td>
+                    <td bg-bind="item.device_no">{{item.device_no}}</td>
                     <td ng-bind="item.da_last_maintain">{{item.da_last_maintain}}</td>
                     <td ng-bind="item.workhours">{{item.workhours}}</td>
                     <td ng-bind="item.last_workhours">{{item.last_workhours}}</td>

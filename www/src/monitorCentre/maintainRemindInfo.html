@@ -1,0 +1,93 @@
+<div class="modal-header">
+    <!-- <div class="modal-title">叉车检索</div> -->
+    <div class="row">
+        <div class="col-md-12 block-title">修改信息</div>
+    </div>
+</div>
+<div class="modal-body maintainRemindInfo">
+        <div class="form-group col-md-6">
+          <label for="device_no" class="col-md-5 control-label">叉车编号</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="device_no" placeholder="叉车编号">
+          </div>
+        </div>
+
+        <div class="form-group col-md-6">
+         <label for="inputEmail" class="col-md-5 control-label">上次保养日期</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="inputEmail" placeholder="上次保养日期">
+          </div>
+        </div>
+
+         <div class="form-group col-md-6">
+          <label for="workhours" class="col-md-5 control-label">工作小时数</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="workhours" placeholder="工作小时数">
+          </div>
+        </div>
+
+        <div class="form-group col-md-6">
+         <label for="last_workhours" class="col-md-5 control-label">上次保养工作小时数</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="last_workhours" placeholder="上次保养工作小时数">
+          </div>
+        </div>
+
+         <div class="form-group col-md-6">
+          <label for="next_workhours" class="col-md-5 control-label">距下次保养小时数</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="next_workhours" placeholder="距下次保养小时数">
+          </div>
+        </div>
+
+        </div>
+         <div class="form-group col-md-6">
+          <label for="maintaincost" class="col-md-5 control-label">保养费用</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="maintaincost" placeholder="保养费用">
+          </div>
+        </div>
+
+        <div class="form-group col-md-6">
+         <label for="maintain_provider" class="col-md-5 control-label">保养厂商</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="maintain_provider" placeholder="保养服务商">
+          </div>
+        </div>
+
+        </div>
+         <div class="form-group col-md-6">
+          <label for="da_maintain" class="col-md-5 control-label">保养登记日期</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="da_maintain" placeholder="保养登记日期">
+          </div>
+        </div>
+
+         <div class="form-group col-md-6">
+          <label for="brokerage" class="col-md-5 control-label">经手人</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="brokerage" placeholder="经手人">
+          </div>
+        </div>
+
+        <div class="form-group col-md-6">
+         <label for="register" class="col-md-5 control-label">登记用户</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="register" placeholder="登记用户">
+          </div>
+        </div>
+
+        <div class="form-group col-md-6">
+         <label for="remark" class="col-md-5 control-label">备注</label>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="remark" placeholder="备注">
+          </div>
+        </div>
+        <br>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-raised btn-info" 
+    ng-click="maintainRemindInfo.save()">保存</button>
+    <button type="button" class="btn btn-raised btn-default" 
+    ng-click="maintainRemindInfo.close()">关闭</button>
+</div>
