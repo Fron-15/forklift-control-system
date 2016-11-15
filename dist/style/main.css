@@ -411,6 +411,13 @@ table > tbody > tr > td{
     line-height: 34px;
     margin: 0 2px 0 2px;
 }
+/*--------------------------------maintainRemindInfo----------------------------------*/
+.updatelabel{
+    display: inline-block;
+    max-width: 100%;
+    font-weight: 500;
+}
+/*--------------------------------maintainRemindInfo----------------------------------*/
 @font-face {
   font-family: 'icons';
   src:  url('../font/icons.eot?99vkp');
