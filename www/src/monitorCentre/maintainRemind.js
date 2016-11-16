@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('maintainRemindCtrl', maintainRemindCtrl);
 
-        maintainRemindCtrl.$inject = ['$scope','Service'];
+        maintainRemindCtrl.$inject = ['$scope','Service','Modal'];
 
-       function maintainRemindCtrl($scope, Service) {
+       function maintainRemindCtrl($scope, Service,Modal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -19,7 +19,8 @@
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
 
-
+            //打开叉车检索信息
+            vm.openMaintainRemindInfo = openMaintainRemindInfo;
 
             //被选中的叉车ID
             vm.checkedId = '';
@@ -48,6 +49,11 @@
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });
+            }
+
+             //打开叉车检索
+            function openMaintainRemindInfo(){
+              Modal.open('monitorCentre','maintainRemindInfo');
             }
         }
     });

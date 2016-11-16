@@ -40,7 +40,7 @@
                  <i class="fa fa-gear"></i>发生语音</button> 
             </div>
 
-            <div id="tableWrape">
+            <div id="tableWrape" class="table-container">
              <table class="table table-condensed table-hover table-bordered table-striped">
               <thead>
                 <tr>
@@ -74,7 +74,7 @@
                             </label>
                         </div>
                     </td>
-                    <td bg-bind="item.car_sn"> <a href="http://www.baidu.com"> {{item.car_sn}} </a></td>
+                    <td bg-bind="item.car_sn">{{item.car_sn}}</td>
                     <td ng-bind="item.da_up">{{item.da_up}}</td>
                     <td ng-bind="item.work_hours">{{item.work_hours}}</td>
                     <td ng-bind="item.driver_name">{{item.driver_name}}</td>
@@ -103,7 +103,7 @@
                         </span>
                     </td>
                     <td ng-bind="item.department_name">{{item.department_name}}</td>
-                    <td><!-- {{item.location}} -->深圳</td>
+                    <td>{{item.location}}</td>
                 </tr>
             </tbody>
          </table>
