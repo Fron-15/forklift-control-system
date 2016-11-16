@@ -1,4 +1,107 @@
 <module-view icon="app-product-icon" parent-title="系统管理 / " title="菜单管理">
 
+<div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="jumbotron col-md-12">
+                <div class="row">
+                    <div class="col-md-12 block-title">搜索条件</div>
+                </div>
+                <div class="form-group label-floating col-md-4">
+                    <div class="">
+                      <label class="control-label" for="user_name">用户名、姓名</label>
+                      <input class="form-control" id="user_name" type="text">
+                    </div>                
+                 </div>
+                 <div class="col-md-3">
+                         <select id="select1" class="form-control">
+                              <option>--请选择部门--</option>
+                              <option>杭叉云智能叉车系统</option>
+                              <option>终端客户</option>
+                          </select>                     
+                  </div>
+                  <div class="col-md-3">
+                         <select id="select1" class="form-control">
+                              <option>--请选择角色--</option>
+                                <option>客户</option>
+								<option>叉车管理员</option>
+								<option>车队</option>
+								<option>调度员</option>
+								<option>调度系统超级管理员</option>
+								<option>租赁管理员</option>
+								<option>系统管理员</option>
+								<option>平台管理员</option>
+                          </select>                     
+                  </div>
+
+                  <div class="col-md-2">
+                      <a class="btn btn-primary btn-raised btn-lg pull-right pull-buttom">查询</a>
+                  </div>
+            </div>
+
+            <div class="wrapper-sm bg-white-only b-b">
+               <button class="btn m-l-xs btn-sm btn-info btn-raised">
+                 <i class="fa fa-unlock"></i>新增</button>
+                 <button class="btn m-l-xs btn-sm btn-success btn-raised">
+                 <i class="fa fa-plus"></i>編輯</button>
+               <button class="btn m-l-xs btn-sm btn-danger btn-raised">
+                 <i class="fa fa-lock"></i>刪除</button>          
+               		          
+      
+            </div>
+           
+            <div id="tableWrape" class="table-container">
+             <table class="table table-condensed table-hover table-bordered table-striped">
+              <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                       <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-click="user.checkedAll()">
+                            </label>
+                        </div>
+                    </th>
+                    <th ng-click="col='user_name';desc=!desc">用户名</th>
+                    <th ng-click="col='realname';desc=!desc">姓名</th>
+                    <th ng-click="col='email';desc=!desc">电子邮箱</th>
+                    <th ng-click="col='mobile';desc=!desc">手机</th>
+                    <th ng-click="col='tel';desc=!desc">电话</th>
+                    <th ng-click="col='updater_name';desc=!desc">更新人</th>
+                    <th ng-click="col='da_create';desc=!desc">添加日期</th>                    
+                    <th ng-click="col='role_name';desc=!desc">角色名称</th>
+                    <th ng-click="col='department_name';desc=!desc">部门名称</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in user.tableData.rows | orderBy:col:desc">
+                    <td>{{$index+1}}</td>
+                    <td>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-checked="user.allChecked">
+                            </label>
+                        </div>
+                    </td>
+                    <td bg-bind="item.user_name">{{item.user_name}}</td>
+                    <td ng-bind="item.realname">{{item.realname}}</td>
+                    <td ng-bind="item.email">{{item.email}}</td>
+                    <td ng-bind="item.mobile">{{item.mobile}}</td>
+                    <td ng-bind="item.tel">{{item.tel}}</td>
+                    <td ng-bind="item.updater_name">{{item.updater_name}}</td>
+                    <td ng-bind="item.da_create">{{item.da_create}}</td>
+                    <td ng-bind="item.role_name">{{item.role_name}}</td>
+                    <td ng-bind="item.department_name">{{item.department_name}}</td>
+                </tr>
+            </tbody>
+         </table>
+         <app-pagination page-index="user.condition.pageNo" total-items="user.totalRecord" page-item-unit="user.condition.pageSize" show-total="true"></app-pagination>
+         </div>
+        <div>
+        </div> 
+       </div>    
+     </div> 
+    </div>
+
 
 </module-view>
