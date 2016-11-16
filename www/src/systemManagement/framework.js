@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('frameworkCtrl', frameworkCtrl);
 
-        frameworkCtrl.$inject = ['$scope'];
+        frameworkCtrl.$inject = ['$scope','Service'];
 
-         function userCtrl($scope, Service) {
+         function frameworkCtrl($scope, Service) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -44,7 +44,7 @@
 
             //获取叉车列表数据(模拟)
             function getTableData() {
-                var name = 'user'+vm.condition.pageNo;
+                var name = 'framewor'+vm.condition.pageNo;
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });
