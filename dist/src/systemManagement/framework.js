@@ -44,7 +44,7 @@
 
             //获取叉车列表数据(模拟)
             function getTableData() {
-                var name = 'framewor'+vm.condition.pageNo;
+                var name = 'framework'+vm.condition.pageNo;
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });

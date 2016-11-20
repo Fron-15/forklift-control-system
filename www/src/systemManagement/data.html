@@ -7,33 +7,12 @@
                 <div class="row">
                     <div class="col-md-12 block-title">搜索条件</div>
                 </div>
-                <div class="form-group label-floating col-md-4">
+                <div class="form-group label-floating col-md-8">
                     <div class="">
-                      <label class="control-label" for="user_name">用户名、姓名</label>
+                      <label class="control-label" for="user_name">关键字</label>
                       <input class="form-control" id="user_name" type="text">
                     </div>                
                  </div>
-                 <div class="col-md-3">
-                         <select id="select1" class="form-control">
-                              <option>--请选择部门--</option>
-                              <option>杭叉云智能叉车系统</option>
-                              <option>终端客户</option>
-                          </select>                     
-                  </div>
-                  <div class="col-md-3">
-                         <select id="select1" class="form-control">
-                              <option>--请选择角色--</option>
-                                <option>客户</option>
-								<option>叉车管理员</option>
-								<option>车队</option>
-								<option>调度员</option>
-								<option>调度系统超级管理员</option>
-								<option>租赁管理员</option>
-								<option>系统管理员</option>
-								<option>平台管理员</option>
-                          </select>                     
-                  </div>
-
                   <div class="col-md-2">
                       <a class="btn btn-primary btn-raised btn-lg pull-right pull-buttom">查询</a>
                   </div>
@@ -58,44 +37,40 @@
                     <th>
                        <div class="checkbox">
                             <label>
-                                <input type="checkbox" ng-click="user.checkedAll()">
+                                <input type="checkbox" ng-click="data.checkedAll()">
                             </label>
                         </div>
                     </th>
-                    <th ng-click="col='user_name';desc=!desc">用户名</th>
-                    <th ng-click="col='realname';desc=!desc">姓名</th>
-                    <th ng-click="col='email';desc=!desc">电子邮箱</th>
-                    <th ng-click="col='mobile';desc=!desc">手机</th>
-                    <th ng-click="col='tel';desc=!desc">电话</th>
-                    <th ng-click="col='updater_name';desc=!desc">更新人</th>
-                    <th ng-click="col='da_create';desc=!desc">添加日期</th>                    
-                    <th ng-click="col='role_name';desc=!desc">角色名称</th>
-                    <th ng-click="col='department_name';desc=!desc">部门名称</th>
+                    <th ng-click="col='codetype';desc=!desc">字典类型</th>
+                    <th ng-click="col='codetext';desc=!desc">字典显示</th>
+                    <th ng-click="col='codevalue';desc=!desc">字典值</th>
+                    <th ng-click="col='detail';desc=!desc">详细描述</th>
+                    <th ng-click="col='sort_no';desc=!desc">排序</th>
+                    <th ng-click="col='da_add';desc=!desc">添加时间</th>
+                    <th ng-click="col='da_update';desc=!desc">修改时间</th>                    
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="item in user.tableData.rows | orderBy:col:desc">
+                <tr ng-repeat="item in data.tableData.rows | orderBy:col:desc">
                     <td>{{$index+1}}</td>
                     <td>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" ng-checked="user.allChecked">
+                                <input type="checkbox" ng-checked="data.allChecked">
                             </label>
                         </div>
                     </td>
-                    <td bg-bind="item.user_name">{{item.user_name}}</td>
-                    <td ng-bind="item.realname">{{item.realname}}</td>
-                    <td ng-bind="item.email">{{item.email}}</td>
-                    <td ng-bind="item.mobile">{{item.mobile}}</td>
-                    <td ng-bind="item.tel">{{item.tel}}</td>
-                    <td ng-bind="item.updater_name">{{item.updater_name}}</td>
-                    <td ng-bind="item.da_create">{{item.da_create}}</td>
-                    <td ng-bind="item.role_name">{{item.role_name}}</td>
-                    <td ng-bind="item.department_name">{{item.department_name}}</td>
+                    <td bg-bind="item.codetype">{{item.codetype}}</td>
+                    <td ng-bind="item.codetext">{{item.codetext}}</td>
+                    <td ng-bind="item.codevalue">{{item.codevalue}}</td>
+                    <td ng-bind="item.detail">{{item.detail}}</td>
+                    <td ng-bind="item.sort_no">{{item.sort_no}}</td>
+                    <td ng-bind="item.da_add">{{item.da_add}}</td>
+                    <td ng-bind="item.da_update">{{item.da_update}}</td>
                 </tr>
             </tbody>
          </table>
-         <app-pagination page-index="user.condition.pageNo" total-items="user.totalRecord" page-item-unit="user.condition.pageSize" show-total="true"></app-pagination>
+         <app-pagination page-index="data.condition.pageNo" total-items="data.totalRecord" page-item-unit="data.condition.pageSize" show-total="true"></app-pagination>
          </div>
         <div>
         </div> 

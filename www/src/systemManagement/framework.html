@@ -23,7 +23,7 @@
                <button class="btn m-l-xs btn-sm btn-info btn-raised">
                  <i class="fa fa-unlock"></i>新增</button>
                  <button class="btn m-l-xs btn-sm btn-success btn-raised">
-                 <i class="fa fa-plus"></i>編輯</button>
+                 <i class="fa fa-plus"></i>编辑</button>
                <button class="btn m-l-xs btn-sm btn-danger btn-raised">
                  <i class="fa fa-lock"></i>刪除</button>          
                		          
@@ -38,23 +38,24 @@
                     <th>
                        <div class="checkbox">
                             <label>
-                                <input type="checkbox" ng-click="framewor.checkedAll()">
+                                <input type="checkbox" ng-click="framework.checkedAll()">
                             </label>
                         </div>
                     </th>
-                    <th ng-click="col='user_name';desc=!desc">用户名</th>
-                    <th ng-click="col='realname';desc=!desc">姓名</th>
-                    <th ng-click="col='email';desc=!desc">电子邮箱</th>
-                    <th ng-click="col='mobile';desc=!desc">手机</th>
-                    <th ng-click="col='tel';desc=!desc">电话</th>
-                    <th ng-click="col='updater_name';desc=!desc">更新人</th>
-                    <th ng-click="col='da_create';desc=!desc">添加日期</th>                    
-                    <th ng-click="col='role_name';desc=!desc">角色名称</th>
                     <th ng-click="col='department_name';desc=!desc">部门名称</th>
+                    <th ng-click="col='tel';desc=!desc">电话</th>
+                    <th ng-click="col='fax';desc=!desc">传真</th>
+                    <th ng-click="col='address';desc=!desc">地址</th>
+                    <th ng-click="col='zip_code';desc=!desc">邮编</th>
+                    <th ng-click="col='charger';desc=!desc">部门领导</th>
+                    <th ng-click="col='mobile';desc=!desc">手机</th>                    
+                    <th ng-click="col='eamil';desc=!desc">电子邮箱</th>
+                    <th ng-click="col='link_man';desc=!desc">联系人</th>
+                    <th ng-click="col='mobile1';desc=!desc">手机</th>  <th ng-click="col='eamil1';desc=!desc">电子邮箱</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="item in framewor.tableData.rows | orderBy:col:desc">
+                <tr ng-repeat="item in framework.tableData.rows | orderBy:col:desc">
                     <td>{{$index+1}}</td>
                     <td>
                         <div class="checkbox">
@@ -63,19 +64,21 @@
                             </label>
                         </div>
                     </td>
-                    <td bg-bind="item.user_name">{{item.user_name}}</td>
-                    <td ng-bind="item.realname">{{item.realname}}</td>
-                    <td ng-bind="item.email">{{item.email}}</td>
-                    <td ng-bind="item.mobile">{{item.mobile}}</td>
+                    <td bg-bind="item.department_name">{{item.department_name}}</td>
                     <td ng-bind="item.tel">{{item.tel}}</td>
-                    <td ng-bind="item.updater_name">{{item.updater_name}}</td>
-                    <td ng-bind="item.da_create">{{item.da_create}}</td>
-                    <td ng-bind="item.role_name">{{item.role_name}}</td>
-                    <td ng-bind="item.department_name">{{item.department_name}}</td>
+                    <td ng-bind="item.fax">{{item.fax}}</td>
+                    <td ng-bind="item.address">{{item.address}}</td>
+                    <td ng-bind="item.zip_code">{{item.zip_code}}</td>
+                    <td ng-bind="item.charger">{{item.charger}}</td>
+                    <td ng-bind="item.mobile">{{item.mobile}}</td>
+                    <td ng-bind="item.eamil">{{item.eamil}}</td>
+                    <td ng-bind="item.link_man">{{item.link_man}}</td>
+                    <td ng-bind="item.mobile1">{{item.mobile1}}</td>
+                    <td ng-bind="item.eamil1">{{item.eamil1}}</td>
                 </tr>
             </tbody>
          </table>
-         <app-pagination page-index="framewor.condition.pageNo" total-items="framewor.totalRecord" page-item-unit="framewor.condition.pageSize" show-total="true"></app-pagination>
+         <app-pagination page-index="framework.condition.pageNo" total-items="framework.totalRecord" page-item-unit="framework.condition.pageSize" show-total="true"></app-pagination>
          </div>
         <div>
         </div> 

@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('menueCtrl', menueCtrl);
 
-        menueCtrl.$inject = ['$scope'];
+        menueCtrl.$inject = ['$scope','Service'];
 
-         function userCtrl($scope, Service) {
+         function menueCtrl($scope, Service) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -44,7 +44,7 @@
 
             //获取叉车列表数据(模拟)
             function getTableData() {
-                var name = 'user'+vm.condition.pageNo;
+                var name = 'menue'+vm.condition.pageNo;
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });
