@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('forkliftControllerCtrl', forkliftControllerCtrl);
 
-        forkliftControllerCtrl.$inject = ['$scope','DatePicker','Service'];
+        forkliftControllerCtrl.$inject = ['$scope','DatePicker','Service','Modal'];
 
-        function forkliftControllerCtrl($scope,DatePicker,Service) {
+        function forkliftControllerCtrl($scope,DatePicker,Service,Modal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -18,6 +18,8 @@
             vm.checked = checked;
             //全选点击事件
             vm.checkedAll=checkedAll;
+            //新增
+            vm.add = add;
             //查询条件
             vm.condition = { pageNo:1 , pageSize:10 };
             //数据总量，先写死 24 ，要根据接口
@@ -44,6 +46,11 @@
             //全选
             function checkedAll(){
                   vm.allChecked = !vm.allChecked;
+            }
+
+            //新增
+            function add(){
+                 Modal.open('baseData','addForkliftController');
             }
 
             //获取叉车列表数据(模拟)
