@@ -6,7 +6,8 @@
         'angular-ui-router', 
         'angular-loading-bar', 
         'angular-ui-select',
-        'ng-file-upload'
+        'ng-file-upload',
+        'angular-ui-tree'
     ], function() {
         var app = angular.module('app', [
             'ui.bootstrap',
@@ -17,7 +18,8 @@
             'ngStorage',
             'ngMessages',
             'angular-loading-bar',
-            'ngFileUpload'
+            'ngFileUpload',
+            'ui.tree'
         ]);
         return app;
     });

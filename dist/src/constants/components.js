@@ -17,13 +17,8 @@
             'monitorCentre.vehicleState':['monitorCentre/vehicleState'],
             'monitorCentre.vehicleAlarm':['monitorCentre/vehicleAlarm'],
             'monitorCentre.vehicleViolation':['monitorCentre/vehicleViolation'],
-<<<<<<< HEAD
-            'monitorCentre.maintainRemind':['monitorCentre/maintainRemind'],
-            'baseData.forkliftController':['baseData/forkliftController','baseData/addForkliftController'],
-=======
             'monitorCentre.maintainRemind':['monitorCentre/maintainRemind','monitorCentre/maintainRemindInfo','constants/moment','directives/datetimePicker','directiveTemplates/datetimePicker'],
             'baseData.forkliftController':['baseData/forkliftController'],
->>>>>>> 6a164a0e6190415be1bb00d0a83d74741c992da6
             'baseData.vehicleType':['baseData/vehicleType'],
             'baseData.vehicleInfo':['baseData/vehicleInfo'],
             'baseData.controlMobile':['baseData/controlMobile'],
