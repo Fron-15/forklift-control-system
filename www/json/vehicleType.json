@@ -1,0 +1,65 @@
+{
+  "total": 4,
+  "rows": [
+    {
+      "updater": "1",
+      "company_id": "60006558",
+      "dev_type_name": "内燃",
+      "hd_type_id": "297",
+      "is_delete": "0",
+      "adder": "7008",
+      "da_update": "2016-11-10 17:44:23",
+      "department_no": "001002001",
+      "dev_type_no": "内燃叉车",
+      "hd_model_id": "5230",
+      "da_add": "2016-07-05 18:04:56",
+      "hd_type_name": "内燃平衡重式叉车",
+      "hd_type_no": "CPCD30-XRG72"
+    },
+    {
+      "updater": "6905",
+      "company_id": "2",
+      "dev_type_name": "内燃",
+      "hd_type_id": "297",
+      "is_delete": "0",
+      "adder": "6905",
+      "da_update": "2016-07-05 14:57:55",
+      "department_no": "001002",
+      "dev_type_no": "内燃叉车",
+      "hd_model_id": "5225",
+      "da_add": "2016-07-05 14:57:01",
+      "hd_type_name": "内燃平衡重式叉车",
+      "hd_type_no": "CPCD30N-RG51"
+    },
+    {
+      "updater": "6905",
+      "company_id": "2",
+      "dev_type_name": "电瓶叉车",
+      "hd_type_id": "296",
+      "is_delete": "0",
+      "adder": "6905",
+      "da_update": "2016-06-23 15:05:30",
+      "department_no": "001002",
+      "dev_type_no": "电瓶叉车",
+      "hd_model_id": "5215",
+      "da_add": "2016-06-23 15:05:30",
+      "hd_type_name": "蓄电池平衡重式叉车",
+      "hd_type_no": "CPD50J-C2"
+    },
+    {
+      "updater": "1",
+      "company_id": "2",
+      "dev_type_name": "内燃",
+      "hd_type_id": "297",
+      "is_delete": "0",
+      "adder": "6905",
+      "da_update": "2016-09-02 10:53:21",
+      "department_no": "001002",
+      "dev_type_no": "内燃叉车",
+      "hd_model_id": "5214",
+      "da_add": "2016-06-23 15:04:42",
+      "hd_type_name": "内燃平衡重式叉车",
+      "hd_type_no": "CPC10-AG26"
+    }
+  ]
+}
