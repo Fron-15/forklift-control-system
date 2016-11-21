@@ -2,9 +2,10 @@
     define(['app'], function(app) {
         app.controller('maintainRemindInfoCtrl', maintainRemindInfoCtrl);
 
-        maintainRemindInfoCtrl.$inject = ['$scope', 'Service','$uibModalInstance'];
+        maintainRemindInfoCtrl.$inject = ['$scope', 'Service',
+        '$uibModalInstance','swal'];
 
-        function maintainRemindInfoCtrl($scope, Service,$uibModalInstance) {
+        function maintainRemindInfoCtrl($scope, Service,$uibModalInstance,swal) {
             var vm = this;
             //关闭
             vm.close = close;
@@ -18,7 +19,9 @@
             }
             //保存
             function save(){
-             alert("保存成功!");
+             swal.fn(swal.options.save,function(){
+                swal.fn.close();
+             })
             }
           
         }

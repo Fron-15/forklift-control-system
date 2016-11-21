@@ -47,6 +47,12 @@
                     timer: 1000, 
                     type: 'success', 
                     showConfirmButton: false
+                },
+                save: {
+                    title: '保存成功', 
+                    timer: 1000, 
+                    type: 'success', 
+                    showConfirmButton: false
                 }
             }
         });
