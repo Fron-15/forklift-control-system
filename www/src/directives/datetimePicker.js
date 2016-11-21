@@ -13,7 +13,8 @@
                     dateFormat: '@',
                     datetimeRequired: '@',
                     datePickerOptions: '=',
-                    showDatePickerButtonBar: '@'
+                    showDatePickerButtonBar: '@',
+                    dateTimeShowYear:'@'
                 },
                 controller: 'datetimePickerCtrl',
                 controllerAs: 'datetimePicker',
@@ -22,7 +23,7 @@
                 link: link
             };
             return directive;
-
+ 
             function link(scope, element, attrs, ctrls) {
                 var ngModelCtrl = ctrls[0], datetimePickerCtrl = ctrls[1];
 
@@ -36,6 +37,9 @@
 
                 //View To Model
                 function formatView(viewValue) {
+
+
+
                     return viewValue;
                 }
 

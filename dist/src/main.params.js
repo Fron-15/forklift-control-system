@@ -21,7 +21,8 @@ define(function() {
             'ng-file-upload': '../lib/ng-file-upload/ng-file-upload.min',
             'ngStorage': '../lib/ngstorage/ngStorage.min',
             'domReady': '../lib/domReady/domReady',
-            'angular-ui-tree':'../lib/angular-ui-tree/dist/angular-ui-tree.min'
+            'angular-ui-tree':'../lib/angular-ui-tree/dist/angular-ui-tree.min',
+            'echarts':'../lib/echarts/dist/echarts.min'
         },
         shim: {
             'angular': { exports: 'angular' },

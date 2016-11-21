@@ -18,6 +18,7 @@
             vm.showBar = vm.showDatePickerButtonBar === 'false' ? false : true;
             //是否为必填项
             vm.required = vm.datetimeRequired === 'true' ? true : false;
+            vm.showYear = vm.dateTimeShowYear=== 'true' ? true : false;
             //日期明细
             vm.item = {};
 
@@ -53,7 +54,6 @@
                 if(vm.item.date && vm.item.hour && vm.item.mimute) {
                     datetime = $filter('date')(vm.item.date, 'yyyy-MM-dd') + ' ' + vm.item.hour + ':' + vm.item.mimute + ':00';
                 }
-
                 //把时间数值更新到ngModel
                 ngModelCtrl.$setViewValue(datetime);
             }

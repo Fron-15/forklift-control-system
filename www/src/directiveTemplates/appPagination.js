@@ -6,7 +6,6 @@
 
         function appPaginationCtrl($scope) {
             var vm = this;
-
             //跳转页
             vm.skipIndex = vm.pageIndex;
             //每页笔数
