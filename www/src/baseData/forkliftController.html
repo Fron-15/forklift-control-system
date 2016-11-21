@@ -1,19 +1,28 @@
 <module-view icon="app-product-icon" parent-title="基础资料 / " title="控制器管理">
+
+<div class="col-lg-12">
+  <div class="panel panel-default">
+   <div class="panel-body">
     <div class="jumbotron  col-md-12">
         <div class="row">
             <div class="col-md-12 block-title">搜索条件</div>
         </div>
-        <div class="form-group label-floating col-md-12">
+        <div class="form-group label-floating col-md-8">
             <label class="control-label" for="focusedInput1">叉车编号、部门、司机</label>
             <input class="form-control" id="focusedInput1" type="text">
         </div>
-        <div class="col-md-12 ">
+        <div class="col-md-2">
             <a class="btn btn-primary  btn-raised btn-lg pull-right">查询</a>
         </div>
     </div>
-    <a class="btn btn-raised btn-primary" ng-click="forkliftController.add()">新增</a>
-    <a class="btn btn-raised btn-success">编辑</a>
-    <a class="btn btn-raised btn-danger">删除</a>
+    <div class="wrapper-sm bg-white-only b-b">
+       <button class="btn m-l-xs btn-sm btn-info btn-raised">
+         <i class="fa fa-unlock"></i>新增</button>
+         <button class="btn m-l-xs btn-sm btn-success btn-raised">
+         <i class="fa fa-plus"></i>編輯</button>
+       <button class="btn m-l-xs btn-sm btn-danger btn-raised">
+         <i class="fa fa-lock"></i>刪除</button>          
+    </div>
        <div class="jumbotron  col-md-12">
         <div class="table-container">
             <table class="table table-condensed table-hover table-bordered table-striped">
@@ -148,4 +157,9 @@
             </table>
         </div>
         <app-pagination page-index="forkliftController.condition.pageNo" total-items="forkliftController.totalRecord" page-item-unit="forkliftController.condition.pageSize" show-total="true"></app-pagination>
+        <div>
+        </div> 
+      </div>    
+    </div> 
+</div>
 </module-view>
