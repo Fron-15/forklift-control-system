@@ -172,79 +172,104 @@ table {
 }
 
 
-/*-------------------------------------- Home --------------------------------------*/
 
-.tooltip-inner {
-    white-space: nowrap;
-    background-color: rgba(79, 86, 93, .8);
-    padding: 5px 8px;
+/*-------------------------------------- Home--------------------------------------*/
+.home-topbar{
+    background-color: #266E98;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+.home-topbar .user-system-logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    left: 25px;
+    position: relative;
+
+}
+.home-topbar .user-system-title{
+    position: relative;
+    color: white;
+    left: 25px;
+    font-size: 16px;
 }
 
-.home-parent-module {
+.home-topbar .user-title {
+    float: right;
+    color: white;
+}
+
+.home-topbar .user-name {
+    float: right;
+    margin-right: 3px;
+    color: white;
+}
+
+.home-topbar .user-logout{
+        float: right;
+    margin-right: 20px;
+    color: white;
+}
+
+.home-sidebar {
     height: 100%;
-    width: 56px;
-    background-color: #212529;
-    position: fixed;
+    width: 200px;
+    background-color: white;
+    position: absolute;
     left: 0;
-    padding-top: 10px;
+    top: 50px;
     color: #c3cfd8;
     font-size: 16px;
     z-index: 2;
+    overflow: auto;
 }
 
-.home-parent-module .title-image {
-    margin-bottom: 30px;
+
+.home-parentModule{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: left;
+    border-bottom:1px solid lightgray;
+    color: #266E98;
+    font-size: 14px;
 }
 
-.home-parent-module .item {
-    padding: 12.5px 0 12.5px 0;
-    cursor: pointer;
+.home-parentModule-icon{
+    margin-left: 20px;
+    margin-right: 5px; 
 }
 
-.home-parent-module .item-marketing {
-    /*margin-top: 30px;*/
-}
-
-.home-parent-module .chosen {
-    color: #ffffff;
-    background-color: rgba(79, 86, 93, 0.5);
-}
-
-.home-child-module {
-    height: 100%;
-    width: 176px;
-    background-color: #31373d;
-    position: fixed;
-    left: 56px;
-    color: #c3cfd8;
-}
-
-.home-child-module .title {
-    height: 56px;
-    line-height: 56px;
-    font-size: 15px;
-    padding-left: 20px;
-    border-bottom: 1px #ccc solid;
-    box-shadow: inset 0px -1px 0px 0px rgba(32, 36, 40, 0.50);
-}
-
-.home-child-module .item {
+.home-childModule{
+    width: 100%;
     height: 40px;
+    background-color: #F1F6FA;
+    text-align: left;
     line-height: 40px;
-    font-size: 15px;
-    padding-left: 20px;
-    cursor: pointer;
 }
 
-.home-child-module .chosen {
-    background-color: #454e57;
-    color: #ffffff;
+.home-childModule-dot{
+    float: left;
+    background-color: #266E98;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    margin-left:40px;
+    margin-top: 19px;  
+}
+
+.home-childModule-name{
+    font-size: 12px;
+    color: #266E98;
+    padding-left: 15px;
 }
 
 .home-views {
-    margin-left: 232px;
-    /*min-width: 1170px;*/
+    margin-left: 200px;
 }
+
+
 
 
 /*-------------------------------------- forkliftMonitor --------------------------------------*/
@@ -296,6 +321,7 @@ table {
     font-size: 20px;
     border-bottom: 1px #ccc solid;
     padding-left: 20px;
+    display: none;
 }
 
 .module-view-title .parent {

@@ -27,7 +27,7 @@
             'baseData.parameterConfig':['baseData/parameterConfig'],
             'maintainRegister.repairRegister':['maintainRegister/repairRegister'],
             'maintainRegister.maintainRegister':['maintainRegister/maintainRegister'],
-            'reportCentre.synthesisReport':['reportCentre/synthesisReport'],
+            'reportCentre.synthesisReport':['reportCentre/synthesisReport','directives/lineCharts','directiveTemplates/lineCharts','directives/mapCharts','directiveTemplates/mapCharts','../../lib/echarts/map/js/china'],
             'reportCentre.forklistWorkTime':['reportCentre/forklistWorkTime'],
             'reportCentre.driverWorkTime':['reportCentre/driverWorkTime'],
             'reportCentre.efficiency':['reportCentre/efficiency'],
