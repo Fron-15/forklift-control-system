@@ -12,7 +12,6 @@
             //选择子模块
             vm.chooseChild = chooseChild;
 
-
             //获取模块列表
             getModuleList();
             //退出
@@ -22,19 +21,20 @@
             vm.userInfo = $sessionStorage.userInfo;
 
             function logout() {
-
                 $state.go('login');
-
             }
 
             //选择父模块
             function chooseParent(item) {
                 vm.parentModule = item;
-                item.childShow = !item.childShow;
-                angular.forEach(vm.moduleList, function(data, index, array) {
-                    data.childShow = data.code == item.code ? true : false;
-                });
 
+                angular.forEach(vm.moduleList, function(data, index, array) {
+                    if (data.code == item.code) {
+                        item.childShow = !item.childShow;
+                    } else {
+                        data.childShow = false;
+                    }
+                });
             }
 
             //选择子模块
@@ -42,15 +42,29 @@
                 vm.childModule = childItem;
                 vm.parentModule = parentItem;
                 $state.go('module', { parent: vm.parentModule.code, name: childItem.code, param: null, param1: null });
+
+                angular.forEach(vm.moduleList, function(data, index, array) {
+                    if (data.items.length > 0) {
+                        angular.forEach(data.items, function(subData, subIndex, subArray) {
+                            subData.isSelected = subData.code == childItem.code ? true : false;
+                        });
+                    }
+                });
             }
 
+
+            //到叉车监控页面
+            function goForkliftMonitor() {
+                chooseParent($filter('filter')(vm.moduleList, { code: 'monitorCentre' })[0]);
+                chooseChild(vm.parentModule, $filter('filter')(vm.parentModule.items, { code: 'forkliftMonitor' })[0]);
+                // vm.isInforkliftMonitor = true;
+            }
 
             //获取模块列表
             function getModuleList() {
                 Service.getJson('module').then(function(data) {
                     vm.moduleList = data;
-                    chooseParent($filter('filter')(vm.moduleList, { code: 'monitorCentre' })[0]);
-                    chooseChild(vm.parentModule, $filter('filter')(vm.parentModule.items, { code: 'forkliftMonitor' })[0]);
+                    goForkliftMonitor();
                 });
             }
         }
