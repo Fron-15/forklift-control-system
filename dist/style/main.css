@@ -18,6 +18,10 @@ input {
     /*font-family: PingFangSC-Regular;*/
 }
 
+body{
+     background-color: #F1F6FA;
+}
+
 .product-image-size {
     width: 640px;
     height: 640px;
@@ -61,11 +65,13 @@ input {
 
 .container-fluid {
     padding-bottom: 20px;
+    background-color: #F1F6FA;
 }
 
 table > thead > tr > th{
     text-align:center;
     vertical-align:middle !important;
+     background-color: #F1F6FA;
 }
 
 table > thead > tr > th:hover{
@@ -173,26 +179,27 @@ table {
 
 
 
-/*-------------------------------------- Home--------------------------------------*/
-.home-topbar{
+/*-------------------------------------- Home --------------------------------------*/
+
+.home-topbar {
     background-color: #266E98;
     width: 100%;
     height: 50px;
     line-height: 50px;
 }
-.home-topbar .user-system-logo{
+
+.home-topbar .user-system-logo {
     width: 30px;
     height: 30px;
     border-radius: 15px;
-    left: 25px;
+    left: 40px;
     position: relative;
-
 }
-.home-topbar .user-system-title{
+
+.home-topbar .user-system-title {
     position: relative;
     color: white;
-    left: 25px;
-    font-size: 16px;
+    left: 45px;
 }
 
 .home-topbar .user-title {
@@ -206,8 +213,8 @@ table {
     color: white;
 }
 
-.home-topbar .user-logout{
-        float: right;
+.home-topbar .user-logout {
+    float: right;
     margin-right: 20px;
     color: white;
 }
@@ -219,29 +226,49 @@ table {
     position: absolute;
     left: 0;
     top: 50px;
-    color: #c3cfd8;
     font-size: 16px;
     z-index: 2;
     overflow: auto;
 }
 
 
-.home-parentModule{
+.home-parentModule {
     width: 100%;
     height: 60px;
     line-height: 60px;
     text-align: left;
-    border-bottom:1px solid lightgray;
-    color: #266E98;
+    border-bottom: 1px solid lightgray;
+    color: #666666;
     font-size: 14px;
 }
 
-.home-parentModule-icon{
+.home-parentModule-icon {
     margin-left: 20px;
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
-.home-childModule{
+.home-parentModule-arrow-left {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 180px;
+    margin-top: 23px;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.home-parentModule-arrow-down {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 180px;
+    margin-top: 23px;
+}
+
+.home-childModule {
     width: 100%;
     height: 40px;
     background-color: #F1F6FA;
@@ -249,26 +276,43 @@ table {
     line-height: 40px;
 }
 
-.home-childModule-dot{
+.home-childModule-name:hover {
+    color: #266E98;
+    font-size: 14px;
+}
+
+.home-childModule-isSelected {
+    color: #266E98;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.home-childModule-notSelected {
+    font-size: 12px;
+    color: #666666;
+    padding-left: 15px;
+}
+
+.home-childModule-dot {
     float: left;
     background-color: #266E98;
     width: 6px;
     height: 6px;
     border-radius: 3px;
-    margin-left:40px;
-    margin-top: 19px;  
+    margin-left: 40px;
+    margin-top: 19px;
 }
 
-.home-childModule-name{
+
+/*.home-childModule-name{
     font-size: 12px;
     color: #266E98;
     padding-left: 15px;
-}
+}*/
 
 .home-views {
     margin-left: 200px;
 }
-
 
 
 

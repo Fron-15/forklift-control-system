@@ -7,27 +7,33 @@
         "isShow": true,
         "items": [{
                 "code": "forkliftMonitor",
-                "name": "叉车监控"
+                "name": "叉车监控",
+                "isSelected":true
             },
             {
                 "code": "historyData",
-                "name": "历史数据"
+                "name": "历史数据",
+                "isSelected":false
             },
             {
                 "code": "vehicleState",
-                "name": "当前车辆状态"
+                "name": "当前车辆状态",
+                "isSelected":false
             },
             {
                 "code": "vehicleAlarm",
-                "name": "当前车辆报警"
+                "name": "当前车辆报警",
+                "isSelected":false
             },
             {
                 "code": "vehicleViolation",
-                "name": "当前车辆违规"
+                "name": "当前车辆违规",
+                "isSelected":false
             },
             {
                 "code": "maintainRemind",
-                "name": "保养提醒"
+                "name": "保养提醒",
+                "isSelected":false
             }
         ]
     },
@@ -40,31 +46,38 @@
         "items": [
             {
                 "code": "forkliftController",
-                "name": "控制器管理"
+                "name": "控制器管理",
+                "isSelected":false
             },
             {
                 "code": "vehicleType",
-                "name": "车型信息管理"
+                "name": "车型信息管理",
+                "isSelected":false
             },
             {
                 "code": "vehicleInfo",
-                "name": "叉车信息管理"
+                "name": "叉车信息管理",
+                "isSelected":false
             },
             {
                 "code": "controlMobile",
-                "name": "调度手机管理"
+                "name": "调度手机管理",
+                "isSelected":false
             },
             {
                 "code": "driverArchives",
-                "name": "司机档案管理"
+                "name": "司机档案管理",
+                "isSelected":false
             },
             {
                 "code": "relevance",
-                "name": "叉车司机关联"
+                "name": "叉车司机关联",
+                "isSelected":false
             },
             {
                 "code": "parameterConfig",
-                "name": "参数配置"
+                "name": "参数配置",
+                "isSelected":false
             }
         ]
     },
@@ -77,11 +90,13 @@
         "items": [
             {
                 "code": "repairRegister",
-                "name": "叉车维修登记"
+                "name": "叉车维修登记",
+                "isSelected":false
             },
             {
                 "code": "maintainRegister",
-                "name": "叉车保养登记"
+                "name": "叉车保养登记",
+                "isSelected":false
             }
         ]
     },
@@ -94,35 +109,43 @@
         "items": [
             {
                 "code": "synthesisReport",
-                "name": "叉车综合报表"
+                "name": "叉车综合报表",
+                "isSelected":false
             },
             {
                 "code": "forklistWorkTime",
-                "name": "叉车工作时间统计"
+                "name": "叉车工作时间统计",
+                "isSelected":false
             },
             {
                 "code": "driverWorkTime",
-                "name": "司机工作时间统计"
+                "name": "司机工作时间统计",
+                "isSelected":false
             },
             {
                 "code": "efficiency",
-                "name": "叉车工作效率报表"
+                "name": "叉车工作效率报表",
+                "isSelected":false
             },
             {
                 "code": "alarmReport",
-                "name": "叉车报警统计"
+                "name": "叉车报警统计",
+                "isSelected":false
             },
             {
                 "code": "violationReport",
-                "name": "叉车违规统计"
+                "name": "叉车违规统计",
+                "isSelected":false
             },
             {
                 "code": "repairReport",
-                "name": "叉车维修统计"
+                "name": "叉车维修统计",
+                "isSelected":false
             },
             {
                 "code": "maintainReport",
-                "name": "叉车保养统计"
+                "name": "叉车保养统计",
+                "isSelected":false
             }
         ]
     },
@@ -135,23 +158,28 @@
         "items": [
             {
                 "code": "user",
-                "name": "用户管理"
+                "name": "用户管理",
+                "isSelected":false
             },
             {
                 "code": "framework",
-                "name": "组织架构与部门管理"
+                "name": "组织架构与部门管理",
+                "isSelected":false
             },
             {
                 "code": "role",
-                "name": "角色管理"
+                "name": "角色管理",
+                "isSelected":false
             },
             {
                 "code": "menue",
-                "name": "菜单管理"
+                "name": "菜单管理",
+                "isSelected":false
             },
             {
                 "code": "data",
-                "name": "数据字典"
+                "name": "数据字典",
+                "isSelected":false
             }
         ]
     }

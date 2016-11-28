@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>下拉</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="数据分析" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CMS/数据分析/数据概况/页面浏览" transform="translate(-154.000000, -148.000000)" fill="#999999">
+            <g id="thirdNav" transform="translate(0.000000, 52.000000)">
+                <g id="navTitle1" transform="translate(0.000000, 70.000000)">
+                    <g id="下拉" transform="translate(160.500000, 30.000000) scale(1, -1) rotate(-180.000000) translate(-160.500000, -30.000000) translate(154.500000, 26.500000)">
+                        <g id="Shape">
+                            <polygon points="6 6.98004301 0.00739784946 0.98744086 0.981849462 0.0143655914 6 5.03251613 11.0181505 0.0143655914 11.9926022 0.98744086"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
