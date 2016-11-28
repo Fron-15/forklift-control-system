@@ -1,4 +1,78 @@
 <module-view icon="app-product-icon" parent-title="基础资料 / " title="叉车司机关联">
 
+<div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+	        <div class="row">
+	            <div class="col-md-12 block-title">搜索条件</div>
+	        </div>
+            <div class="jumbotron col-md-12">
+                 <div class="form-group label-floating col-md-8">
+                    <div class="">
+                      <label class="control-label" for="user_name">设备编号</label>
+                      <input class="form-control" id="user_name" type="text">
+                    </div>                
+                 </div>
+                  <div class="col-md-2">
+                      <a class="btn btn-primary btn-raised btn-lg pull-right pull-buttom">查询</a>
+                  </div>
+            </div>
+
+            <div class="wrapper-sm bg-white-only b-b">
+               <button class="btn m-l-xs btn-sm btn-info btn-raised">
+                 <i class="fa fa-unlock"></i>新增</button>
+                 <button class="btn m-l-xs btn-sm btn-success btn-raised">
+                 <i class="fa fa-plus"></i>編輯</button>
+               <button class="btn m-l-xs btn-sm btn-danger btn-raised">
+                 <i class="fa fa-lock"></i>刪除</button>              
+            </div>
+           
+            <div id="tableWrape" class="table-container">
+             <table class="table table-condensed table-hover table-bordered table-striped">
+              <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                       <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-click="relevance.checkedAll()">
+                            </label>
+                        </div>
+                    </th>
+                    <th ng-click="col='device_no';desc=!desc">叉车编号</th>
+                    <th ng-click="col='dev_type_name';desc=!desc">物料类型</th>
+                    <th ng-click="col='hd_type_no';desc=!desc">物料代码</th>
+                    <th ng-click="col='hd_type_name';desc=!desc">物料名称</th>
+                    <th ng-click="col='driver_name';desc=!desc">当前司机</th>
+                    <th ng-click="col='device_parm';desc=!desc">设备配置</th>       
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in relevance.tableData.rows | orderBy:col:desc">
+                    <td>{{$index+1}}</td>
+                    <td>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-checked="relevance.allChecked">
+                            </label>
+                        </div>
+                    </td>
+                    <td bg-bind="item.device_no">{{item.device_no}}</td>
+                    <td bg-bind="item.dev_type_name">{{item.dev_type_name}}</td>
+                    <td bg-bind="item.hd_type_no">{{item.hd_type_no}}</td>
+                    <td bg-bind="item.hd_type_name">{{item.hd_type_name}}</td>
+                    <td bg-bind="item.driver_name">{{item.driver_name}}</td>
+                    <td bg-bind="item.device_parm">{{item.device_parm}}</td>
+                 
+                </tr>
+            </tbody>
+         </table>
+         <app-pagination page-index="relevance.condition.pageNo" total-items="relevance.totalRecord" page-item-unit="relevance.condition.pageSize" show-total="true"></app-pagination>
+         </div>
+        <div>
+        </div> 
+       </div>    
+     </div> 
+    </div>
 
 </module-view>
