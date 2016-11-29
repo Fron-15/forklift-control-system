@@ -1,4 +1,269 @@
 <module-view icon="app-product-icon" parent-title="基础资料 / " title="参数配置">
 
+<ul id="myTab" class="nav nav-tabs">
+  <li><a href="#tree" data-toggle="tab">测试树结构</a></li>
+  <li class="active">
+    <a href="#home" data-toggle="tab">
+     内燃叉车
+    </a>
+  </li>
+  <li><a href="#ios" data-toggle="tab">电瓶叉车</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  
+  <div class="tab-pane fade  in active" id="tree">
 
+    <div ui-tree>
+        <ol ui-tree-nodes="" ng-model="parameterConfig.list">
+            <li ng-repeat="item in parameterConfig.list" ui-tree-node>
+                <div ui-tree-handle>
+                    {{item.title}}
+                </div>
+                <ol ui-tree-nodes="" ng-model="item.nodes">
+                    <li ng-repeat="subItem in item.nodes" ui-tree-node>
+                        <div ui-tree-handle>
+                            {{subItem.title}}
+                        </div>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <div class="tree well">
+     <ul>
+      <li>
+       <span><i class="glyphicon glyphicon-folder-open"></i> Parent</span> <a href="">Goes somewhere</a>
+       <ul>
+        <li>
+          <span><i class="glyphicon glyphicon-minus-sign"></i> Child</span> <a href="">Goes somewhere</a>
+         <ul>
+          <li>
+            <span><i class="glyphicon glyphicon-leaf"></i> Grand Child</span> <a href="">Goes somewhere</a>
+          </li>
+         </ul>
+        </li>
+        <li>
+          <span><i class="glyphicon glyphicon-minus-sign"></i> Child</span> <a href="">Goes somewhere</a>
+         <ul>
+          <li>
+            <span><i class="glyphicon glyphicon-leaf"></i> Grand Child</span> <a href="">Goes somewhere</a>
+          </li>
+          <li>
+            <span><i class="glyphicon glyphicon-minus-sign"></i> Grand Child</span> <a href="">Goes somewhere</a>
+           <ul>
+            <li>
+              <span><i class="glyphicon glyphicon-minus-sign"></i> Great Grand Child</span> <a href="">Goes somewhere</a>
+               <ul>
+                <li>
+                  <span><i class="glyphicon glyphicon-leaf"></i> Great great Grand Child</span> <a href="">Goes somewhere</a>
+                </li>
+                <li>
+                  <span><i class="glyphicon glyphicon-leaf"></i> Great great Grand Child</span> <a href="">Goes somewhere</a>
+                </li>
+                </ul>
+            </li>
+            <li>
+              <span><i class="glyphicon glyphicon-leaf"></i> Great Grand Child</span> <a href="">Goes somewhere</a>
+            </li>
+            <li>
+              <span><i class="glyphicon glyphicon-leaf"></i> Great Grand Child</span> <a href="">Goes somewhere</a>
+            </li>
+           </ul>
+          </li>
+          <li>
+            <span><i class="glyphicon glyphicon-leaf"></i> Grand Child</span> <a href="">Goes somewhere</a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span><i class="glyphicon glyphicon-folder-open"></i> Parent2</span> <a href="">Goes somewhere</a>
+       <ul>
+        <li>
+          <span><i class="glyphicon glyphicon-leaf"></i> Child</span> <a href="">Goes somewhere</a>
+          </li>
+         </ul>
+      </li>
+     </ul>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="home">
+   <div class="row">
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="device_no" class="updatelabel">离位超时阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="device_no">
+        </div>
+      </div>
+
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="workhours" class="updatelabel">安全带报警阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="workhours">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="device_no" class="updatelabel">超速阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="device_no">
+        </div>
+      </div>
+
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="workhours" class="updatelabel">超载阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="workhours">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="device_no" class="updatelabel">碰撞阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="device_no">
+        </div>
+      </div>
+
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="workhours" class="updatelabel">偏离围栏:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="workhours">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="device_no" class="updatelabel">保养小时数:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="device_no">
+        </div>
+      </div>
+
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="workhours" class="updatelabel">提醒小时数:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="workhours">
+        </div>
+      </div>
+    </div>
+
+    <div class="text-left">
+      <button type="button" class="btn btn-raised btn-info" 
+      ng-click="maintainRemindInfo.save()">保存</button>
+    </div>
+
+  </div>
+  <div class="tab-pane fade" id="ios">
+    <div class="row">
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="device_no" class="updatelabel">离位超时阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="device_no">
+        </div>
+      </div>
+
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="workhours" class="updatelabel">安全带报警阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text"
+           class="form-control" id="workhours">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="device_no" class="updatelabel">超速阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="device_no">
+        </div>
+      </div>
+
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="workhours" class="updatelabel">超载阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="workhours">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="device_no" class="updatelabel">碰撞阀值:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="device_no">
+        </div>
+      </div>
+
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="workhours" class="updatelabel">偏离围栏:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="workhours">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="device_no" class="updatelabel">保养小时数:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="device_no">
+        </div>
+      </div>
+
+     <div class="form-group col-md-4">
+        <div class="col-md-5">
+        <div for="workhours" class="updatelabel">提醒小时数:</div>
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="workhours">
+        </div>
+      </div>
+    </div>
+
+    <div class="text-left">
+      <button type="button" class="btn btn-raised btn-info" 
+      ng-click="maintainRemindInfo.save()">保存</button>
+    </div>
+  </div>
+</div>
 </module-view>

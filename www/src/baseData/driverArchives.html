@@ -1,4 +1,92 @@
 <module-view icon="app-product-icon" parent-title="基础资料 / " title="司机档案管理">
 
+<div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="jumbotron col-md-12">
+                <div class="row">
+                    <div class="col-md-12 block-title">搜索条件</div>
+                </div>
+                 <div class="form-group label-floating col-md-8">
+                    <div class="">
+                      <label class="control-label" for="user_name">姓名、部门</label>
+                      <input class="form-control" id="user_name" type="text">
+                    </div>                
+                 </div>
+                  <div class="col-md-2">
+                      <a class="btn btn-primary btn-raised btn-lg pull-right pull-buttom">查询</a>
+                  </div>
+            </div>
+
+            <div class="wrapper-sm bg-white-only b-b">
+               <button class="btn m-l-xs btn-sm btn-info btn-raised">
+                 <i class="fa fa-unlock"></i>新增</button>
+                 <button class="btn m-l-xs btn-sm btn-success btn-raised">
+                 <i class="fa fa-plus"></i>編輯</button>
+               <button class="btn m-l-xs btn-sm btn-danger btn-raised">
+                 <i class="fa fa-lock"></i>刪除</button>          
+               		          
+      
+            </div>
+           
+            <div id="tableWrape" class="table-container">
+             <table class="table table-condensed table-hover table-bordered table-striped">
+              <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                       <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-click="driverArchives.checkedAll()">
+                            </label>
+                        </div>
+                    </th>
+                    <th ng-click="col='driver_no';desc=!desc">工号</th>
+                    <th ng-click="col='driver_name';desc=!desc">姓名</th>
+                    <th ng-click="col='sex';desc=!desc">性别</th>
+                    <th ng-click="col='id_card';desc=!desc">身份证号</th>
+                    <th ng-click="col='da_brith';desc=!desc">出生日期</th>
+                    <th ng-click="col='da_entry';desc=!desc">入职时间</th>
+                    <th ng-click="col='telphone';desc=!desc">联系方式</th>
+                    <th ng-click="col='department_name';desc=!desc">所属部门</th>
+                    <th ng-click="col='phone_no';desc=!desc">手机设备</th>
+                    <th ng-click="col='remark';desc=!desc">备注</th>
+                    <th ng-click="col='da_add';desc=!desc">添加时间</th>
+                    <th ng-click="col='da_update';desc=!desc">修改时间</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in driverArchives.tableData.rows | orderBy:col:desc">
+                    <td>{{$index+1}}</td>
+                    <td>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-checked="driverArchives.allChecked">
+                            </label>
+                        </div>
+                    </td>
+                    <td bg-bind="item.driver_no">{{item.driver_no}}</td>
+                    <td bg-bind="item.driver_name">{{item.driver_name}}</td>
+                    <td bg-bind="item.sex">{{item.sex}}</td>
+                    <td bg-bind="item.id_card">{{item.id_card}}</td>
+                    <td bg-bind="item.da_brith">{{item.da_brith}}</td>
+                    <td bg-bind="item.da_entry">{{item.da_entry}}</td>
+                    <td bg-bind="item.telphone">{{item.telphone}}</td>
+                    <td ng-bind="item.department_name">{{item.department_name}}</td>
+                    <td ng-bind="item.phone_no">{{item.phone_no}}</td>
+                    <td ng-bind="item.remark">{{item.remark}}</td>
+                    <td ng-bind="item.da_add">{{item.da_add}}</td>
+                    <td ng-bind="item.da_update">{{item.da_update}}</td>
+                </tr>
+            </tbody>
+         </table>
+         <app-pagination page-index="driverArchives.condition.pageNo" total-items="driverArchives.totalRecord" page-item-unit="driverArchives.condition.pageSize" show-total="true"></app-pagination>
+         </div>
+        <div>
+        </div> 
+       </div>    
+     </div> 
+    </div>
 
 </module-view>
