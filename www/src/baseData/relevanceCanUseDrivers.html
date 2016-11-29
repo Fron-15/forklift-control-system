@@ -1,0 +1,121 @@
+<div class="modal-header">
+    <!-- <div class="modal-title">叉车检索</div> -->
+    <div class="row">
+        <div class="col-md-12 block-title">修改信息</div>
+    </div>
+</div>
+<div class="modal-body">
+        <div class="form-group col-md-6">
+          <div class="col-md-5">
+          <div for="device_no" class="updatelabel">叉车编号</div>
+          </div>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="device_no">
+          </div>
+        </div>
+
+       <div class="form-group col-md-6">
+          <div class="col-md-5">
+          <div for="workhours" class="updatelabel">工作小时数</div>
+          </div>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="workhours">
+          </div>
+        </div>
+
+        <div class="form-group col-md-6">
+         <div class="col-md-5">
+         <div for="last_workhours" class="updatelabel">上次保养工作小时数</div>
+         </div>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="last_workhours">
+          </div>
+        </div>
+
+         <div class="form-group col-md-6">
+          <div class="col-md-5">
+          <div for="next_workhours" class="updatelabel">距下次保养小时数</div>
+          </div>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="next_workhours">
+          </div>
+        </div>
+
+         <div class="form-group col-md-6">
+          <div class="col-md-5">
+          <div for="maintaincost" class="updatelabel">保养费用</div>
+          </div>
+          <div class="col-md-7">
+            <input type="text" class="form-control" id="maintaincost">
+          </div>
+        </div>
+
+       <div class="form-group col-md-6">
+        <div class="col-md-5">
+        <div for="maintain_provider" class="updatelabel">保养厂商</div>
+        </div>
+         <div class="col-md-7">
+           <input type="text" class="form-control" id="maintain_provider">
+         </div>
+       </div>
+        
+        <div class="form-group col-md-6">
+         <div class="col-md-5">
+         <div for="brokerage" class="updatelabel">经手人</div>
+         </div>
+         <div class="col-md-7">
+           <input type="text" class="form-control" id="brokerage">
+         </div>
+       </div>
+       
+       <div class="form-group col-md-6">
+         <div class="col-md-5">
+         <div for="register" class="updatelabel">登记用户</div>
+         </div>
+         <div class="col-md-7">
+           <input type="text" class="form-control" id="register">
+         </div>
+       </div>
+       
+
+        <div class="form-group col-md-12" ng-class="{ 'has-error': planForm.form.$error.startTimeRequired }">
+            <div class="col-md-3">
+              <div for="da_last_maintain" class="updatelabel">上次保养日期</div>
+             </div>
+            <div class="col-md-9">
+                <datetime-picker ng-model="planForm.item.startTime" date-picker-options="planForm.datePickerOptions" datetime-required="true"></datetime-picker>
+                <ng-messages class="help-block" for="planForm.form.$error">
+                    <ng-message when="startTimeRequired">请输入开始时间</ng-message>
+                </ng-messages>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12" ng-class="{ 'has-error': planForm.form.$error.startTimeRequired }">
+            <div class="col-md-3">
+              <div for="da_maintain" class="updatelabel">保养登记日期</div>
+             </div>
+            <div class="col-md-9">
+                <datetime-picker ng-model="planForm.item.startTime" date-picker-options="planForm.datePickerOptions" datetime-required="true"></datetime-picker>
+                <ng-messages class="help-block" for="planForm.form.$error">
+                    <ng-message when="startTimeRequired">请输入开始时间</ng-message>
+                </ng-messages>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+         <div class="col-md-2">
+         <div for="remark" class="updatelabel">备注</div>
+         </div>
+         <div class="col-md-10">
+           <input type="text" class="form-control" id="remark">
+         </div>
+       </div>
+       <br>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-raised btn-info" 
+    ng-click="relevanceCanUseDrivers.save()">保存</button>
+    <button type="button" class="btn btn-raised btn-default" 
+    ng-click="relevanceCanUseDrivers.close()">关闭</button>
+</div>

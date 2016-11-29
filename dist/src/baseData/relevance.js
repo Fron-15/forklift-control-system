@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('relevanceCtrl', relevanceCtrl);
 
-        relevanceCtrl.$inject = ['$scope','Service'];
+        relevanceCtrl.$inject = ['$scope','Service','Modal'];
 
-         function relevanceCtrl($scope, Service) {
+         function relevanceCtrl($scope, Service,Modal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -19,7 +19,11 @@
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
 
-
+            //打开当前司机界面
+            vm.relevanceCurrentDriver = relevanceCurrentDriver;
+            //打开可以使用该车的界面
+            vm.relevanceCanUseDrivers = relevanceCanUseDrivers;
+            
 
             //被选中的叉车ID
             vm.checkedId = '';
@@ -48,6 +52,16 @@
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });
+            }
+
+             //打开叉车检索
+            function relevanceCurrentDriver(){
+              Modal.open('baseData','relevanceCurrentDriver');
+            }
+
+             //打开可以使用该车的界面
+             function relevanceCanUseDrivers(){
+              Modal.open('baseData','relevanceCanUseDrivers');
             }
         }
     });

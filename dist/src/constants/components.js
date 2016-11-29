@@ -23,7 +23,7 @@
             'baseData.vehicleInfo':['baseData/vehicleInfo'],
             'baseData.controlMobile':['baseData/controlMobile'],
             'baseData.driverArchives':['baseData/driverArchives'],
-            'baseData.relevance':['baseData/relevance'],
+            'baseData.relevance':['baseData/relevance','baseData/relevanceCurrentDriver','baseData/relevanceCanUseDrivers'],
             'baseData.parameterConfig':['baseData/parameterConfig'],
             'maintainRegister.repairRegister':['maintainRegister/repairRegister'],
             'maintainRegister.maintainRegister':['maintainRegister/maintainRegister'],
