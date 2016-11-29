@@ -12,7 +12,7 @@
             //日期选择器
             vm.datePicker = DatePicker;
             // 日期选择器选项
-            vm.datePickerOptions = {minDate:vm.datePicker.today};
+            vm.datePickerOptions = {maxDate:vm.datePicker.today};
 
             //单选
             vm.checked = checked;
