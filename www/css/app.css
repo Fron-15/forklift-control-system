@@ -357,4 +357,18 @@ table {
 }
 
 
-/*-------------------------------------- historyData --------------------------------------*/
+/*-------------------------------------- fkWorkTimeCharts --------------------------------------*/
+.fkWorkTimeCharts{
+    position: relative;
+    top: 50px;
+}
+
+/*-------------------------------------- driverWorkTimeCharts --------------------------------------*/
+.driverWorkTimeCharts{
+     position: relative;
+    top: 50px;
+}
+
+
+
+

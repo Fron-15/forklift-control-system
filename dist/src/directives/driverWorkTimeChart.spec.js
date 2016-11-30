@@ -1,6 +1,6 @@
 (function() {
     define(['app'], function(app) {
-        describe('directive: fkWorkTimeCharts', function() {
+        describe('directive: driverWorkTimeChart', function() {
             var $compile, $rootScope;
 
             beforeEach(module(app.name));

@@ -6,6 +6,7 @@
 
         function parameterConfigCtrl($scope) {
 
+            //模板加载完成之后
             $scope.$watch('$viewContentLoaded', function(event) {
                 $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
                 $('.tree li.parent_li > span').on('click', function(e) {
