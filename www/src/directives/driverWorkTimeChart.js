@@ -23,14 +23,14 @@
                 //图表相关配置
                 var option = {
                     title: {
-                        text: '叉车工作时间',
+                        text: '司机工作小时数',
                         x: '20px'
                     },
                     tooltip: {
                         trigger: 'axis'
                     },
                     legend: {
-                        data: ['统计期间工作小时数', '累计工作小时数']
+                        data: ['统计期间工作小时数']
                     },
                     toolbox: {
                         show: true,
@@ -47,10 +47,12 @@
                     calculable: true,
                     xAxis: [{
                         type: 'category',
-                        data: ['M5AF00002', 'M5AF00003', 'M5AF00004', 'M5AF00005', 'M5AF00006', 'M5AF00007', 'M5AF00008', 'M5AF00010', 'M5AF00011', 'M5AF00012', 'M5AF00013', 'M5AF00014']
+                        name:'司机姓名',
+                        data: ['李朝金', '李朝金', '李朝金', '李朝金', '李朝金', '李朝金', '李朝金', '李朝金', '李朝金', '李朝金', '李朝金', '李朝金']
                     }],
                     yAxis: [{
-                        type: 'value'
+                        type: 'value',
+                        name:'工作小时数'
                     }],
                     series: [{
                         name: '统计期间工作小时数',
@@ -60,21 +62,6 @@
                             data: [
                                 { type: 'max', name: '最大值' },
                                 { type: 'min', name: '最小值' }
-                            ]
-                        },
-                        markLine: {
-                            data: [
-                                { type: 'average', name: '平均值' }
-                            ]
-                        }
-                    }, {
-                        name: '累计工作小时数',
-                        type: 'bar',
-                        data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
-                        markPoint: {
-                            data: [
-                                { name: '年最高', value: 182.2, xAxis: 7, yAxis: 183, symbolSize: 18 },
-                                { name: '年最低', value: 2.3, xAxis: 11, yAxis: 3 }
                             ]
                         },
                         markLine: {

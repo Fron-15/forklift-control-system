@@ -18,11 +18,9 @@ input {
     /*font-family: PingFangSC-Regular;*/
 }
 
-body{
-     background-color: #F1F6FA;
+body {
+    background-color: #F1F6FA;
 }
-
-
 
 .product-image-size {
     width: 640px;
@@ -52,7 +50,6 @@ body{
     overflow-y: auto;
     overflow: auto;
     margin: 0 0 1em;
-
 }
 
 
@@ -70,28 +67,28 @@ body{
     background-color: #F1F6FA;
 }
 
-table > thead > tr > th{
-    text-align:center;
-    vertical-align:middle !important;
-     background-color: #F1F6FA;
+table > thead > tr > th {
+    text-align: center;
+    vertical-align: middle !important;
+    background-color: #F1F6FA;
 }
 
-table > thead > tr > th:hover{
+table > thead > tr > th:hover {
     color: #418EC6;
-  }
+}
 
-table > tbody > tr > td{
-    text-align:center;
-    vertical-align:middle !important;
-} 
+table > tbody > tr > td {
+    text-align: center;
+    vertical-align: middle !important;
+}
 
-table > tbody > tr > td:hover{
-     color: #418EC6;
-} 
+table > tbody > tr > td:hover {
+    color: #418EC6;
+}
 
 table {
     margin-top: 10px;
-     white-space: nowrap;
+    white-space: nowrap;
 }
 
 .row-space {
@@ -180,7 +177,6 @@ table {
 }
 
 
-
 /*-------------------------------------- Home --------------------------------------*/
 
 .home-topbar {
@@ -232,7 +228,6 @@ table {
     z-index: 2;
     overflow: auto;
 }
-
 
 .home-parentModule {
     width: 100%;
@@ -317,7 +312,6 @@ table {
 }
 
 
-
 /*-------------------------------------- forkliftMonitor --------------------------------------*/
 
 #mapWrape {
@@ -358,14 +352,37 @@ table {
 
 
 /*-------------------------------------- fkWorkTimeCharts --------------------------------------*/
-.fkWorkTimeCharts{
+
+.fkWorkTimeCharts {
     position: relative;
     top: 50px;
 }
 
+
 /*-------------------------------------- driverWorkTimeCharts --------------------------------------*/
-.driverWorkTimeCharts{
-     position: relative;
+
+.driverWorkTimeCharts {
+    position: relative;
+    top: 50px;
+}
+
+.efficiencyChart {
+    position: relative;
+    top: 50px;
+}
+
+.efficiencyDayChart {
+    position: relative;
+    top: 50px;
+}
+
+.efficiencyMonthChart {
+    position: relative;
+    top: 60px;
+}
+
+.alarmReportCharts{
+    position: relative;
     top: 50px;
 }
 

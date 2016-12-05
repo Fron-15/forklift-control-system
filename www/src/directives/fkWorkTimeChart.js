@@ -47,10 +47,12 @@
                     calculable: true,
                     xAxis: [{
                         type: 'category',
+                        name:'叉车编号',
                         data: ['M5AF00002', 'M5AF00003', 'M5AF00004', 'M5AF00005', 'M5AF00006', 'M5AF00007', 'M5AF00008', 'M5AF00010', 'M5AF00011', 'M5AF00012', 'M5AF00013', 'M5AF00014']
                     }],
                     yAxis: [{
-                        type: 'value'
+                        type: 'value',
+                        name:'工作小时数'
                     }],
                     series: [{
                         name: '统计期间工作小时数',
