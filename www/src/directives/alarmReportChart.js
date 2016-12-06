@@ -55,7 +55,7 @@
                     }],
                     yAxis: [{
                         type: 'value',
-                        name:'报警次数'
+                        name:'报警车辆台数'
                     }],
                     series: [{
                         name: '制动压力报警',
