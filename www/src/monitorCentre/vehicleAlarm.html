@@ -27,15 +27,20 @@
             </div>
 
             <div class="wrapper-sm bg-white-only b-b">
-               <button class="btn m-l-xs btn-sm btn-info btn-raised">
+               <button class="btn m-l-xs btn-sm btn-info btn-raised" 
+               ng-click="vehicleAlarm.lockVehicle()">
                  <i class="fa fa-unlock"></i>锁车</button>
-               <button class="btn m-l-xs btn-sm btn-danger btn-raised">
+               <button class="btn m-l-xs btn-sm btn-danger btn-raised"
+               ng-click="vehicleAlarm.unlockVehicle()">
                  <i class="fa fa-lock"></i>解车</button>          
-               <button class="btn m-l-xs btn-sm btn-success btn-raised">
-                 <i class="fa fa-plus"></i>限速</button>		          
-               <button class="btn m-l-xs btn-sm  btn-primary btn-raised">
+               <button class="btn m-l-xs btn-sm btn-success btn-raised"
+               ng-click="vehicleAlarm.limitspeed()">
+                 <i class="fa fa-plus"></i>限速</button>              
+               <button class="btn m-l-xs btn-sm  btn-primary btn-raised"
+               ng-click="vehicleAlarm.unlimitspeed()">
                  <i class="fa fa-check"></i>解速</button> 
-               <button class="btn m-l-xs btn-sm btn-dark btn-raised">
+               <button class="btn m-l-xs btn-sm btn-dark btn-raised"
+               ng-click="vehicleAlarm.submitVideo()">
                  <i class="fa fa-gear"></i>发生语音</button> 
             </div>
 

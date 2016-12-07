@@ -53,6 +53,51 @@
                     timer: 1000, 
                     type: 'success', 
                     showConfirmButton: false
+                },
+                lockVehicle: {
+                    title: '确认锁定所选车辆？',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#0099cc',
+                    cancelButtonText: '取消',
+                    closeOnConfirm: false,
+                    confirmButtonText: '确认锁车'
+                },
+                unlockVehicle: {
+                    title: '确认解除所选车辆？',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#0099cc',
+                    cancelButtonText: '取消',
+                    closeOnConfirm: false,
+                    confirmButtonText: '解除锁车'
+                },
+                limitspeed: {
+                    title: '确认限制所选车辆速度？',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#0099cc',
+                    cancelButtonText: '取消',
+                    closeOnConfirm: false,
+                    confirmButtonText: '确认限速'
+                },
+                unlimitspeed: {
+                    title: '确认解除所选车辆限速？',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#0099cc',
+                    cancelButtonText: '取消',
+                    closeOnConfirm: false,
+                    confirmButtonText: '解除限速'
+                },
+                submitVideo: {
+                    title: '确认发送语音？',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#0099cc',
+                    cancelButtonText: '取消',
+                    closeOnConfirm: false,
+                    confirmButtonText: '发送语音'
                 }
             }
         });
