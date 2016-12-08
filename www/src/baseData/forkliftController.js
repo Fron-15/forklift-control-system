@@ -23,6 +23,8 @@
             vm.condition = { pageNo: 1, pageSize: 10 };
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
+            //打开新增界面
+            vm.openForkliftControllerAdd = openForkliftControllerAdd;
 
 
 
@@ -62,13 +64,10 @@
                 });
             }
 
-
-
-          
-
-
-
-
+             //打开叉车检索
+            function openForkliftControllerAdd(){
+              Modal.open('baseData','forkliftControllerAdd');
+            }
 
         }
     });

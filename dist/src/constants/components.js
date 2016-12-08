@@ -18,7 +18,7 @@
             'monitorCentre.vehicleAlarm':['monitorCentre/vehicleAlarm'],
             'monitorCentre.vehicleViolation':['monitorCentre/vehicleViolation'],
             'monitorCentre.maintainRemind':['monitorCentre/maintainRemind','monitorCentre/maintainRemindInfo','constants/moment','directives/datetimePicker','directiveTemplates/datetimePicker'],
-            'baseData.forkliftController':['baseData/forkliftController'],
+            'baseData.forkliftController':['baseData/forkliftController','baseData/forkliftControllerAdd','constants/moment','directives/datetimePicker','directiveTemplates/datetimePicker'],
             'baseData.vehicleType':['baseData/vehicleType'],
             'baseData.vehicleInfo':['baseData/vehicleInfo'],
             'baseData.controlMobile':['baseData/controlMobile'],
