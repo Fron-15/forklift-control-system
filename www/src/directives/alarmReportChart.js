@@ -60,22 +60,30 @@
                     series: [{
                         name: '制动压力报警',
                         type: 'line',
+                        smooth:true,
                         stack: '总量',
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
                         data: [0, 1,1, 2, 3, 3, 2,3,4, 5, 6,4,5,6]
                     }, {
                         name: '油压报警',
                         type: 'line',
+                        smooth:true,
                         stack: '总量',
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
                         data: [1, 0,1, 2, 4, 3, 4,4,5, 5, 6, 6,4,3]
                     }, {
                         name: '油温报警',
                         type: 'line',
+                        smooth:true,
                         stack: '总量',
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
                         data: [0, 2,3, 3, 2, 4, 4,5, 6, 6, 5, 5,3,2]
                     }, {
                         name: '油水分离报警',
                         type: 'line',
+                        smooth:true,
                         stack: '总量',
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
                         data: [1, 1,0, 0, 2, 3, 3,3, 4, 4, 4, 1,2,3]
                     }]
                 };
