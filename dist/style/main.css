@@ -523,6 +523,7 @@ table {
 }
 /*--------------------------------maintainRemindInfo----------------------------------*/
 
+/*--------------------------------tree----------------------------------*/
 .tree {
   min-height:20px;
   padding:19px;
@@ -584,6 +585,20 @@ table {
   border:1px solid #94a0b4;
   color:#000
 }
+/*--------------------------------tree----------------------------------*/
+
+/*--------------------------------modalform----------------------------------*/
+.modal_form{
+  padding-bottom: 0px;
+  margin: 0 0 0 0;
+  margin-bottom: 0px;
+}
+.modal-dialog {
+    width: 60%;
+    margin: 30px auto;
+  }
+/*--------------------------------modalform----------------------------------*/
+
 @font-face {
   font-family: 'icons';
   src:  url('../font/icons.eot?99vkp');

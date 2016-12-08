@@ -1,14 +1,19 @@
-
 (function() {
     define(['app'], function(app) {
-        app.controller('relevanceCtrl', relevanceCtrl);
+        app.controller('relevanceCurrentDriverCtrl', relevanceCurrentDriverCtrl);
 
-        relevanceCtrl.$inject = ['$scope','Service','Modal'];
+        relevanceCurrentDriverCtrl.$inject = ['$scope', 'Service',
+        '$uibModalInstance','swal'];
 
-         function relevanceCtrl($scope, Service,Modal) {
-            var vm = this;
+        function relevanceCurrentDriverCtrl($scope, Service,$uibModalInstance,swal) {
+
+             var vm = this;
             //全选属性
             vm.allChecked = false;
+            //关闭
+            vm.close = close;
+            //保存
+            vm.save = save;
 
             //单选
             vm.checked = checked;
@@ -18,13 +23,7 @@
             vm.condition = { pageNo:1 , pageSize:10 };
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
-
-            //打开当前司机界面
-            vm.relevanceCurrentDriver = relevanceCurrentDriver;
-            //打开可以使用该车的界面
-            vm.relevanceCanUseDrivers = relevanceCanUseDrivers;
             
-
             //被选中的叉车ID
             vm.checkedId = '';
 
@@ -48,21 +47,25 @@
 
             //获取叉车列表数据(模拟)
             function getTableData() {
-                var name = 'relevance'+vm.condition.pageNo;
+                var name = 'relevanceCurrentDriver'+vm.condition.pageNo;
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });
             }
 
-             //打开叉车检索
-            function relevanceCurrentDriver(){
-              Modal.open('baseData','relevanceCurrentDriver');
-            }
 
-             //打开可以使用该车的界面
-             function relevanceCanUseDrivers(){
-              Modal.open('baseData','relevanceCanUseDrivers');
+            //关闭
+            function close(){
+            	$uibModalInstance.dismiss('cancle');
             }
+            //保存
+            function save(){
+             swal.fn(swal.options.save,function(){
+                swal.fn.close();
+             })
+            }
+          
         }
-    });
+    }); 
 })();
+

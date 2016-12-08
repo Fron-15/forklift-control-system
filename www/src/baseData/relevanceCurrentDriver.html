@@ -1,0 +1,58 @@
+<div class="modal-header">
+    <!-- <div class="modal-title">叉车检索</div> -->
+    <div class="row">
+        <div class="col-md-12 block-title">当前司机</div>
+    </div>
+</div>
+<div class="modal-body">
+      <div class="col-md-12">
+           <div class="form-group modal_form label-floating col-md-2">
+              <div class="">
+                <label class="control-label" for="user_name">姓名</label>
+                <input class="form-control" id="user_name" type="text">
+              </div>                
+           </div>
+            <div class="col-md-2">
+                <a class="btn btn-primary btn-raised btn-sm pull-right pull-buttom">查询</a>
+            </div>
+      </div>
+
+      <div id="tableWrape" class="table-container">
+       <table class="table table-condensed table-hover table-bordered table-striped">
+        <thead>
+          <tr>
+              <th></th>
+              <th ng-click="col='driver_name';desc=!desc">司机姓名</th>
+              <th ng-click="col='department_name';desc=!desc">部门名称</th>
+              <th ng-click="col='sex';desc=!desc">性别</th>
+              <th ng-click="col='phone_no';desc=!desc">调度手机号</th>
+              <th ng-click="col='driver_no';desc=!desc">工号</th>
+              <th ng-click="col='da_add';desc=!desc">添加时间</th>
+              <th ng-click="col='da_update';desc=!desc">修改时间</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in relevanceCurrentDriver.tableData.rows | orderBy:col:desc">
+                <td>{{$index+1}}</td>
+                <td bg-bind="item.driver_name">{{item.driver_name}}</td>
+                <td bg-bind="item.department_name">{{item.department_name}}</td>
+                <td bg-bind="item.sex">{{item.sex}}</td>
+                <td bg-bind="item.phone_no">{{item.phone_no}}</td>
+                <td bg-bind="item.driver_no">{{item.driver_no}}</td>
+                <td bg-bind="item.da_add">{{item.da_add}}</td>
+                <td bg-bind="item.da_update">{{item.da_update}}</td>
+            </tr>
+        </tbody>
+     </table>
+     <app-pagination page-index="relevanceCurrentDriver.condition.pageNo" total-items="relevanceCurrentDriver.totalRecord" page-item-unit="relevanceCurrentDriver.condition.pageSize" show-total="true"></app-pagination>
+     </div>
+    <div>
+</div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-raised btn-info" 
+    ng-click="relevanceCurrentDriver.save()">保存</button>
+    <button type="button" class="btn btn-raised btn-default" 
+    ng-click="relevanceCurrentDriver.close()">关闭</button>
+</div>

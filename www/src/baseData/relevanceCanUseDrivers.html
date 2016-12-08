@@ -1,0 +1,64 @@
+<div class="modal-header">
+    <!-- <div class="modal-title">叉车检索</div> -->
+    <div class="row">
+        <div class="col-md-12 block-title">可开该车辆的司机</div>
+    </div>
+</div>
+<div class="modal-body">
+      <div class="col-md-12">
+           <div class="form-group modal_form label-floating col-md-2">
+              <div class="">
+                <label class="control-label" for="user_name">关键字</label>
+                <input class="form-control" id="user_name" type="text">
+              </div>                
+           </div>
+            <div class="col-md-2">
+                <a class="btn btn-primary btn-raised btn-sm pull-right pull-buttom">查询</a>
+            </div>
+      </div>
+      <div class="wrapper-sm bg-white-only b-b">
+         <button class="btn m-l-xs btn-sm btn-info btn-raised">
+           <i class="fa fa-unlock"></i>新增</button>
+         <button class="btn m-l-xs btn-sm btn-danger btn-raised">
+           <i class="fa fa-lock"></i>刪除</button>          
+      </div>
+
+      <div id="tableWrape" class="table-container">
+       <table class="table table-condensed table-hover table-bordered table-striped">
+        <thead>
+          <tr>
+              <th></th>
+              <th ng-click="col='driver_name';desc=!desc">司机姓名</th>
+              <th ng-click="col='department_name';desc=!desc">部门名称</th>
+              <th ng-click="col='sex';desc=!desc">性别</th>
+              <th ng-click="col='phone_no';desc=!desc">调度手机号</th>
+              <th ng-click="col='driver_no';desc=!desc">工号</th>
+              <th ng-click="col='da_add';desc=!desc">添加时间</th>
+              <th ng-click="col='da_update';desc=!desc">修改时间</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in relevanceCanUseDrivers.tableData.rows | orderBy:col:desc">
+                <td>{{$index+1}}</td>
+                <td bg-bind="item.driver_name">{{item.driver_name}}</td>
+                <td bg-bind="item.department_name">{{item.department_name}}</td>
+                <td bg-bind="item.sex">{{item.sex}}</td>
+                <td bg-bind="item.phone_no">{{item.phone_no}}</td>
+                <td bg-bind="item.driver_no">{{item.driver_no}}</td>
+                <td bg-bind="item.da_add">{{item.da_add}}</td>
+                <td bg-bind="item.da_update">{{item.da_update}}</td>
+            </tr>
+        </tbody>
+     </table>
+     <app-pagination page-index="relevanceCanUseDrivers.condition.pageNo" total-items="relevanceCanUseDrivers.totalRecord" page-item-unit="relevanceCanUseDrivers.condition.pageSize" show-total="true"></app-pagination>
+     </div>
+    <div>
+</div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-raised btn-info" 
+    ng-click="relevanceCanUseDrivers.save()">保存</button>
+    <button type="button" class="btn btn-raised btn-default" 
+    ng-click="relevanceCanUseDrivers.close()">关闭</button>
+</div>
