@@ -2,9 +2,9 @@
     define(['app'], function(app) {
         app.controller('forkliftControllerCtrl', forkliftControllerCtrl);
 
-        forkliftControllerCtrl.$inject = ['$scope', 'DatePicker', 'Service', 'Modal'];
+        forkliftControllerCtrl.$inject = ['$scope', 'DatePicker', 'Service', 'Modal','swal'];
 
-        function forkliftControllerCtrl($scope, DatePicker, Service, Modal) {
+        function forkliftControllerCtrl($scope, DatePicker, Service, Modal,swal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -25,6 +25,10 @@
             vm.totalRecord = 30;
             //打开新增界面
             vm.openForkliftControllerAdd = openForkliftControllerAdd;
+             //打开编辑界面
+            vm.openForkliftControllerEdit = openForkliftControllerEdit;
+            //删除
+            vm.remove = remove;
 
 
 
@@ -64,9 +68,19 @@
                 });
             }
 
-             //打开叉车检索
+             //新建控制器
             function openForkliftControllerAdd(){
               Modal.open('baseData','forkliftControllerAdd');
+            }
+             //编辑控制器
+            function openForkliftControllerEdit(){
+              Modal.open('baseData','forkliftControllerEdit');
+            }
+            //删除
+            function remove(){
+             swal.fn(swal.options.remove,function(){
+                swal.fn.close();
+             })
             }
 
         }

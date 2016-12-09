@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('vehicleInfoCtrl', vehicleInfoCtrl);
 
-        vehicleInfoCtrl.$inject = ['$scope','Service'];
+        vehicleInfoCtrl.$inject = ['$scope','Service','Modal','swal'];
 
-        function vehicleInfoCtrl($scope, Service) {
+        function vehicleInfoCtrl($scope, Service,Modal,swal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -18,6 +18,12 @@
             vm.condition = { pageNo:1 , pageSize:10 };
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
+             //打开新增界面
+            vm.openVehicleInfoAdd = openVehicleInfoAdd;
+             //打开编辑界面
+            vm.openVehicleInfoEdit = openVehicleInfoEdit;
+            //删除
+            vm.remove = remove;
 
 
 
@@ -48,6 +54,21 @@
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });
+            }
+
+              //新建控制器
+            function openVehicleInfoAdd(){
+              Modal.open('baseData','vehicleInfoAdd');
+            }
+             //编辑控制器
+            function openVehicleInfoEdit(){
+              Modal.open('baseData','vehicleInfoEdit');
+            }
+            //锁车
+            function remove(){
+             swal.fn(swal.options.remove,function(){
+                swal.fn.close();
+             })
             }
         }
     });
