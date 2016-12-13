@@ -21,7 +21,7 @@
             'baseData.forkliftController':['baseData/forkliftController','baseData/forkliftControllerAdd','baseData/forkliftControllerEdit','constants/moment','directives/datetimePicker','directiveTemplates/datetimePicker'],
             'baseData.vehicleType':['baseData/vehicleType','baseData/vehicleTypeAdd','baseData/vehicleTypeEdit'],
             'baseData.vehicleInfo':['baseData/vehicleInfo','baseData/vehicleInfoAdd','baseData/vehicleInfoEdit'],
-            'baseData.controlMobile':['baseData/controlMobile'],
+            'baseData.controlMobile':['baseData/controlMobile','baseData/controlMobileAdd','baseData/controlMobileEdit'],
             'baseData.driverArchives':['baseData/driverArchives'],
             'baseData.relevance':['baseData/relevance','baseData/relevanceCurrentDriver','baseData/relevanceCanUseDrivers'],
             'baseData.parameterConfig':['baseData/parameterConfig'],

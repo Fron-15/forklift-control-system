@@ -2,9 +2,9 @@
     define(['app'], function(app) {
         app.controller('controlMobileCtrl', controlMobileCtrl);
 
-        controlMobileCtrl.$inject = ['$scope', 'DatePicker', 'Service','Modal','swal'];
+        controlMobileCtrl.$inject = ['$scope', 'DatePicker', 'Service'];
 
-        function controlMobileCtrl($scope, DatePicker, Service,Modal,swal) {
+        function controlMobileCtrl($scope, DatePicker, Service) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -21,12 +21,6 @@
             vm.condition = { pageNo: 1, pageSize: 10 };
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
-             //打开新增界面
-            vm.openControlMobileAdd = openControlMobileAdd;
-             //打开编辑界面
-            vm.openControlMobileEdit = openControlMobileEdit;
-            //删除
-            vm.remove = remove;
 
 
 
@@ -55,25 +49,10 @@
 
             //获取叉车列表数据(模拟)
             function getTableData() {
-                var name = 'controlMobile' + vm.condition.pageNo;
+                var name = 'historyData' + vm.condition.pageNo;
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });
-            }
-
-             //新建控制器
-            function openControlMobileAdd(){
-              Modal.open('baseData','controlMobileAdd');
-            }
-             //编辑控制器
-            function openControlMobileEdit(){
-              Modal.open('baseData','controlMobileEdit');
-            }
-            //删除
-            function remove(){
-             swal.fn(swal.options.remove,function(){
-                swal.fn.close();
-             })
             }
         }
     });
