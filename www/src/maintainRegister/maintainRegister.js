@@ -2,9 +2,9 @@
     define(['app'], function(app) {
         app.controller('maintainRegisterCtrl', maintainRegisterCtrl);
 
-        maintainRegisterCtrl.$inject = ['$scope', 'DatePicker', 'Service'];
+        maintainRegisterCtrl.$inject = ['$scope', 'DatePicker', 'Service','Modal','swal'];
 
-        function maintainRegisterCtrl($scope, DatePicker, Service) {
+        function maintainRegisterCtrl($scope, DatePicker, Service,Modal,swal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -21,6 +21,12 @@
             vm.condition = { pageNo: 1, pageSize: 10 };
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
+             //打开新增界面
+            vm.openMaintainRegisterAdd = openMaintainRegisterAdd;
+             //打开编辑界面
+            vm.openMaintainRegisterEdit = openMaintainRegisterEdit;
+            //删除
+            vm.remove = remove;
 
 
 
@@ -55,6 +61,21 @@
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });
+            }
+
+            //新建控制器
+            function openMaintainRegisterAdd(){
+              Modal.open('maintainRegister','maintainRegisterAdd');
+            }
+             //编辑控制器
+            function openMaintainRegisterEdit(){
+              Modal.open('maintainRegister','maintainRegisterEdit');
+            }
+            //删除
+            function remove(){
+             swal.fn(swal.options.remove,function(){
+                swal.fn.close();
+             })
             }
         }
     });
