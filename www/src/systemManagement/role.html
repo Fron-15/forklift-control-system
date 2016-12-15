@@ -18,15 +18,16 @@
                   </div>
             </div>
 
-            <div class="wrapper-sm bg-white-only b-b">
-               <button class="btn m-l-xs btn-sm btn-info btn-raised">
-                 <i class="fa fa-unlock"></i>新增</button>
-                 <button class="btn m-l-xs btn-sm btn-success btn-raised">
-                 <i class="fa fa-plus"></i>編輯</button>
-               <button class="btn m-l-xs btn-sm btn-danger btn-raised">
-                 <i class="fa fa-lock"></i>刪除</button>          
-               		          
-      
+             <div class="wrapper-sm bg-white-only b-b">
+               <button class="btn m-l-xs btn-sm btn-info btn-raised"
+             ng-click="role.openRoleAdd()">
+               <i class="fa fa-unlock"></i>新增</button>
+              <button class="btn m-l-xs btn-sm btn-success btn-raised"
+               ng-click="role.openRoleEdit()">
+               <i class="fa fa-plus"></i>編輯</button>
+             <button class="btn m-l-xs btn-sm btn-danger btn-raised"
+             ng-click="role.remove()">
+               <i class="fa fa-lock"></i>刪除</button>  
             </div>
            
             <div id="tableWrape" class="table-container">

@@ -40,11 +40,11 @@
             'reportCentre.violationReport':['reportCentre/violationReport','directives/violationReportChart','directiveTemplates/violationReportChart','reportCharts/violationReportCharts'],
             'reportCentre.repairReport':['reportCentre/repairReport','directives/repairReportChart','directiveTemplates/repairReportChart','reportCharts/repairReportCharts'],
             'reportCentre.maintainReport':['reportCentre/maintainReport','directives/maintainReportChart','directiveTemplates/maintainReportChart','reportCharts/maintainReportCharts'],
-            'systemManagement.user':['systemManagement/user'],
-            'systemManagement.framework':['systemManagement/framework'],
-            'systemManagement.role':['systemManagement/role'],
-            'systemManagement.menue':['systemManagement/menue'],
-            'systemManagement.data':['systemManagement/data']
+            'systemManagement.user':['systemManagement/user','systemManagement/userAdd','systemManagement/userEdit'],
+            'systemManagement.framework':['systemManagement/framework','systemManagement/frameworkAdd','systemManagement/frameworkEdit'],
+            'systemManagement.role':['systemManagement/role','systemManagement/roleAdd','systemManagement/roleEdit'],
+            'systemManagement.menue':['systemManagement/menue','systemManagement/menueAdd','systemManagement/menueEdit'],
+            'systemManagement.data':['systemManagement/data','systemManagement/dataAdd','systemManagement/dataEdit']
         };
 
         angular.forEach(components, function(value, key) {

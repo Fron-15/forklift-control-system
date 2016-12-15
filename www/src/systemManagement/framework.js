@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('frameworkCtrl', frameworkCtrl);
 
-        frameworkCtrl.$inject = ['$scope','Service'];
+        frameworkCtrl.$inject = ['$scope','Service','Modal','swal'];
 
-         function frameworkCtrl($scope, Service) {
+         function frameworkCtrl($scope, Service,Modal,swal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -19,6 +19,12 @@
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
 
+              //打开新增界面
+            vm.openFrameworkAdd = openFrameworkAdd;
+             //打开编辑界面
+            vm.openFrameworkEdit = openFrameworkEdit;
+            //删除
+            vm.remove = remove;
 
 
             //被选中的叉车ID
@@ -49,6 +55,22 @@
                     vm.tableData = data;
                 });
             }
+
+            //新建控制器
+            function openFrameworkAdd(){
+              Modal.open('systemManagement','frameworkAdd');
+            }
+             //编辑控制器
+            function openFrameworkEdit(){
+              Modal.open('systemManagement','frameworkEdit');
+            }
+            //删除
+            function remove(){
+             swal.fn(swal.options.remove,function(){
+                swal.fn.close();
+             })
+            }
+
         }
     });
 })();

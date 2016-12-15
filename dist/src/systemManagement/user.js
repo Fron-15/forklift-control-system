@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('userCtrl', userCtrl);
 
-        userCtrl.$inject = ['$scope','Service'];
+        userCtrl.$inject = ['$scope','Service','Modal','swal'];
 
-        function userCtrl($scope, Service) {
+        function userCtrl($scope, Service,Modal,swal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -19,6 +19,13 @@
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
 
+
+            //打开新增界面
+            vm.openUserAdd = openUserAdd;
+             //打开编辑界面
+            vm.openUserEdit = openUserEdit;
+            //删除
+            vm.remove = remove;
 
 
             //被选中的叉车ID
@@ -48,6 +55,21 @@
                 Service.getJson(name).then(function(data) {
                     vm.tableData = data;
                 });
+            }
+
+            //新建控制器
+            function openUserAdd(){
+              Modal.open('systemManagement','userAdd');
+            }
+             //编辑控制器
+            function openUserEdit(){
+              Modal.open('systemManagement','userEdit');
+            }
+            //删除
+            function remove(){
+             swal.fn(swal.options.remove,function(){
+                swal.fn.close();
+             })
             }
         }
     });

@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('dataCtrl', dataCtrl);
 
-        dataCtrl.$inject = ['$scope','Service'];
+        dataCtrl.$inject = ['$scope','Service','Modal','swal'];
 
-        function dataCtrl($scope, Service) {
+        function dataCtrl($scope, Service,Modal,swal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -18,6 +18,28 @@
             vm.condition = { pageNo:1 , pageSize:10 };
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
+
+            //打开新增界面
+            vm.openDataAdd = openDataAdd;
+             //打开编辑界面
+            vm.openDataEdit = openDataEdit;
+            //删除
+            vm.remove = remove;
+
+            //新建控制器
+            function openDataAdd(){
+              Modal.open('systemManagement','dataAdd');
+            }
+             //编辑控制器
+            function openDataEdit(){
+              Modal.open('systemManagement','dataEdit');
+            }
+            //删除
+            function remove(){
+             swal.fn(swal.options.remove,function(){
+                swal.fn.close();
+             })
+            }
 
 
 

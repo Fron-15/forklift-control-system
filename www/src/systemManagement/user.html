@@ -39,15 +39,16 @@
                   </div>
             </div>
 
-            <div class="wrapper-sm bg-white-only b-b">
-               <button class="btn m-l-xs btn-sm btn-info btn-raised">
-                 <i class="fa fa-unlock"></i>新增</button>
-                 <button class="btn m-l-xs btn-sm btn-success btn-raised">
-                 <i class="fa fa-plus"></i>編輯</button>
-               <button class="btn m-l-xs btn-sm btn-danger btn-raised">
-                 <i class="fa fa-lock"></i>刪除</button>          
-               		          
-      
+           <div class="wrapper-sm bg-white-only b-b">
+               <button class="btn m-l-xs btn-sm btn-info btn-raised"
+             ng-click="user.openUserAdd()">
+               <i class="fa fa-unlock"></i>新增</button>
+              <button class="btn m-l-xs btn-sm btn-success btn-raised"
+               ng-click="user.openUserEdit()">
+               <i class="fa fa-plus"></i>編輯</button>
+             <button class="btn m-l-xs btn-sm btn-danger btn-raised"
+             ng-click="user.remove()">
+               <i class="fa fa-lock"></i>刪除</button>  
             </div>
            
             <div id="tableWrape" class="table-container">
@@ -69,7 +70,7 @@
                     <th ng-click="col='tel';desc=!desc">电话</th>
                     <th ng-click="col='updater_name';desc=!desc">更新人</th>
                     <th ng-click="col='da_create';desc=!desc">添加日期</th>                    
-                    <th ng-click="col='role_name';desc=!desc">角色名称</th>
+                    <th ng-click="col='user_name';desc=!desc">角色名称</th>
                     <th ng-click="col='department_name';desc=!desc">部门名称</th>
                 </tr>
             </thead>
@@ -90,7 +91,7 @@
                     <td ng-bind="item.tel">{{item.tel}}</td>
                     <td ng-bind="item.updater_name">{{item.updater_name}}</td>
                     <td ng-bind="item.da_create">{{item.da_create}}</td>
-                    <td ng-bind="item.role_name">{{item.role_name}}</td>
+                    <td ng-bind="item.user_name">{{item.user_name}}</td>
                     <td ng-bind="item.department_name">{{item.department_name}}</td>
                 </tr>
             </tbody>

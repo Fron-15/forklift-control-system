@@ -3,9 +3,9 @@
     define(['app'], function(app) {
         app.controller('menueCtrl', menueCtrl);
 
-        menueCtrl.$inject = ['$scope','Service'];
+        menueCtrl.$inject = ['$scope','Service','Modal','swal'];
 
-         function menueCtrl($scope, Service) {
+         function menueCtrl($scope, Service,Modal,swal) {
             var vm = this;
             //全选属性
             vm.allChecked = false;
@@ -18,6 +18,28 @@
             vm.condition = { pageNo:1 , pageSize:10 };
             //数据总量，先写死 24 ，要根据接口
             vm.totalRecord = 30;
+
+            //打开新增界面
+            vm.openMenueAdd = openMenueAdd;
+             //打开编辑界面
+            vm.openMenueEdit = openMenueEdit;
+            //删除
+            vm.remove = remove;
+
+            //新建控制器
+            function openMenueAdd(){
+              Modal.open('systemManagement','menueAdd');
+            }
+             //编辑控制器
+            function openMenueEdit(){
+              Modal.open('systemManagement','menueEdit');
+            }
+            //删除
+            function remove(){
+             swal.fn(swal.options.remove,function(){
+                swal.fn.close();
+             })
+            }
 
 
 
